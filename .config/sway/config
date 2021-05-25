@@ -1,0 +1,114 @@
+# Default config for sway
+
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+exec wl-paste -t text --watch clipman store
+exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
+
+exec mako
+
+### Set environment for pipewire support
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+### Variables
+set $lock /home/pinselimo/.local/bin/scripts/lock.sh
+#
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+# Your preferred terminal emulator
+# set $term /home/pinselimo/.cargo/bin/alacritty 
+# set $term x-terminal-emulator
+exec /bin/foot --server --term=xterm
+set $term /bin/footclient
+
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $bigmenu wofi --show=drun | xargs swaymsg exec --
+
+### Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+# output * bg /usr/local/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/pinselimo/Pictures/geometric-lines-connections-network-25433-2560x1440.jpeg fill
+# output * bg /home/pinselimo/Pictures/Gold-Sulfur.jpg fill
+client.focused #ffffff #000000 #FFFFFF #a26597 #543c64
+client.unfocused #ffffff #000000 #FFFFFF #452645 #33243b
+
+#
+# Example configuration:
+#
+output eDP-1 {
+    resolution 2560x1440
+    scale 1.42
+    pos 0 0
+}
+#
+# Position second screen to the right
+output HDMI-A-1 {
+    pos 1803 0
+}
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+default_border pixel 3
+
+gaps inner 8
+gaps outer -5
+gaps bottom -3
+
+### Idle configuration
+#
+# Example configuration:
+#
+exec swayidle -w \
+          timeout 600 'swaylock -f' \
+          timeout 1200 'swaymsg "output * dpms off"' \
+               resume 'swaymsg "output * dpms on"' \
+          before-sleep 'swaylock -f'
+#
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+### Input configuration
+#
+# Example configuration:
+#
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+       dwt enabled
+       tap enabled
+       natural_scroll enabled
+#       middle_emulation enabled
+   }
+
+input * {
+    xkb_layout "de,de(bone),de(neo)"
+}
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+# Default workspaces for common programs
+# assign [class="^Firefox$"] $ws2
+# assign [class="^code-oss$"] $ws2
+# assign [class="^Terminal$"] 1:2
+
+
+include /home/pinselimo/.config/sway/config.d/*
+
+include /etc/sway/config.d/*
+
+bar {
+# Self-compiled:
+#    swaybar_command /home/pinselimo/CPP/Waybar/build/waybar
+#
+# From Ubuntu Repos:
+    swaybar_command waybar
+}

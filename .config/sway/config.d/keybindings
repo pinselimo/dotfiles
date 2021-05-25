@@ -1,0 +1,110 @@
+### Key bindings
+#
+# Custom
+#
+    bindgesture --fingers=4 --no-repeat swipe:left workspace prev
+    bindgesture --fingers=4 --no-repeat swipe:right workspace next
+
+    bindgesture --fingers=3 --no-repeat swipe:up focus up
+    bindgesture --fingers=3 --no-repeat swipe:down focus down
+    bindgesture --fingers=3 --no-repeat swipe:left focus left
+    bindgesture --fingers=3 --no-repeat swipe:right focus right
+
+    #
+    # Change color theme
+    bindsym $mod+Shift+t exec /home/pinselimo/Python/utils/set_theme.py
+
+    # Lock the screen
+    bindsym --no-repeat $mod+Alt+l exec $lock
+
+    # Dismiss a notification
+    bindsym $mod+Shift+x exec makoctl dismiss
+
+    # Toggle keyboard layout
+    exec setxkbmap de
+    bindsym --no-repeat $mod+Alt+Space exec /home/pinselimo/.config/sway/scripts/toggle_kbd.sh
+
+    # Show rofi menu
+    bindsym $mod+d exec $bigmenu
+
+    # Media keys
+    bindsym XF86AudioRaiseVolume exec /home/pinselimo/.config/sway/scripts/volume.sh 'up'
+    bindsym XF86AudioLowerVolume exec /home/pinselimo/.config/sway/scripts/volume.sh 'down'
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    bindsym XF86MonBrightnessUp exec light -A 4
+    bindsym XF86MonBrightnessDown exec light -U 4
+
+    # Extra media buttons
+    bindsym $mod+Shift+W exec light -A 0.5
+    bindsym $mod+Shift+A exec playerctl previous
+    bindsym $mod+Shift+S exec playerctl play-pause
+    bindsym $mod+Shift+D exec playerctl next
+
+    # Clipboard
+    bindsym $mod+c exec clipman pick -t wofi
+#
+# Basics:
+#
+    # Start a terminal
+    bindsym --no-repeat $mod+Return exec $term
+
+    # Kill focused window
+    bindsym $mod+Shift+q kill
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
+    floating_modifier $mod normal
+
+    # Reload the configuration file
+    bindsym $mod+Alt+c reload
+
+    # Exit sway (logs you out of your Wayland session)
+    bindsym $mod+Alt+e exec swaymsg exit
+# exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+#
+# Moving around:
+#
+    # Move your focus around
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+    # Or use $mod+[up|down|left|right]
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # Move the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+    # Ditto, with arrow keys
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+
+#
+# Swap Mode:
+#
+# Swaps focused window with window in direction in order to move it
+# around a layout without altering the layout.
+
+    mode "swap" {
+        bindsym $left mark --add "_swap", focus left, swap container with mark "_swap", focus left, unmark "_swap"
+        bindsym $down mark --add "_swap", focus down, swap container with mark "_swap", focus down, unmark "_swap"
+        bindsym $up mark --add "_swap", focus up, swap container with mark "_swap", focus up, unmark "_swap"
+        bindsym $right mark --add "_swap", focus right, swap container with mark "_swap", focus right, unmark "_swap"
+
+        # Return to default mode
+        bindsym q mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+    }
+    bindsym $mod+Shift+y mode "swap"
