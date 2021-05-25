@@ -1,0 +1,114 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 27,
+    "margin-left":15,
+    "margin-right":15,
+    "margin-bottom":5,
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["custom/weather", "custom/clock"],
+    "modules-right": ["backlight", "pulseaudio", "network", "cpu", "memory", "idle_inhibitor", "battery"],
+
+    "sway/mode": {
+        "format": " {}"
+    },
+    "sway/workspaces": {
+        "format": "{name}",
+        "disable-scroll": true
+    },
+    "sway/window": {
+        "max-length": 80,
+        "tooltip": false
+    },
+    "custom/clock": {
+        "exec": "date '+%H : %M : %S'",
+        "interval": 1,
+        "tooltip": false
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-alt": "{time} {icon}",
+        "format-full": "{icon} ",
+        "format-warning": "",
+        "format-critical": "",
+        "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+        // "charging" : ["","","","","","",""],
+        "interval": 30,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{icon} {signalStrength} \"{essid}\"",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            "wifi": ["", "" ,""],
+            "ethernet": [""],
+            "linked": [""],
+            "disconnected": [""]
+        },
+        "on-click": "terminator -e nmtui",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format-alt": "{icon} {volume}",
+        "format": "{icon}",
+        "format-alt-click": "click-right",
+        "format-muted": "",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "phone": ["",""],
+            "headphone": "",
+            "headset": "",
+            "bluetooth": "",
+            "default": ["","",""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "cpu": {
+        "format-alt": " {usage}",
+        "format": "",
+        "format-alt-click": "click-right",
+        "tooltip": false,
+        "on-click": "gnome-system-monitor -r"
+    },
+    "memory": {
+        "format-alt": " {percentage}",
+        "format": "",
+        "format-alt-click": "click-right",
+        "tooltip": false,
+        "on-click": "gnome-system-monitor -r"
+    },
+    "backlight": {
+        "format-alt": "{icon} {percent}",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", ""],
+        "on-scroll-down": "light -A 1",
+        "on-scroll-up": "light -U 1"
+    },
+    "custom/weather": {
+        "format": "{}",
+        "format-alt": "{alt}: {}",
+        "format-alt-click": "click-right",
+        "interval": 600,
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/weather.sh Graz",
+        "exec-if": "ping en.wttr.in -c1",
+        "on-click": "firefox 'https://google.com/search?q=Weather%20Graz'"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": false
+    }
+}

@@ -1,0 +1,184 @@
+@define-color bg-color rgba(43, 48, 59, 0.0);
+@define-color bg-color-0 rgb(60, 65, 60);
+@define-color bg-color-1 rgb(16, 166, 116);
+@define-color bg-color-2 rgba(91, 91, 91, 0.3);
+@define-color bg-color-3 rgba(243, 244, 245, 0.5);
+
+@define-color fg-color rgb (243, 244, 245);           /* #f3f4f5 */
+@define-color alert-bg-color rgb (189, 44, 64);       /* #bd2c40 */
+@define-color alert-fg-color rgb (255,255,255);       /* #FFFFFF */
+@define-color inactive-fg-color rgb(144, 153, 162);   /* #9099a2 */
+@define-color inactive-bg-color rgb(64, 69, 82);      /* #404552 */
+
+* {
+    border: 10px;
+    border-radius: 4px;
+    font-family: Ubuntu Sans Mono, Material Design Icons, sans-serif;
+    font-size: 14px;
+    min-height: 0;
+    opacity: 1.0;
+}
+
+window#waybar {
+    background-color: @bg-color;
+    color: @fg-color;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: @fg-color;
+    border-bottom: 3px solid transparent;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inherit;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#workspaces button.focused {
+    background-color: @bg-color-0;
+    background-color: @bg-color-2;
+    border-bottom: 3px solid @fg-color;
+}
+
+#workspaces button.urgent {
+    border-bottom: 3px solid @alert-bg-color;
+}
+
+#mode {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-0;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#custom-clock {
+    padding: 0 10px;
+    margin: 0 4px;
+    color: @fg-color;
+    background-color: @bg-color-2;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#custom-weather {
+    padding: 0 10px;
+    margin: 0 4px;
+    color: @fg-color;
+    background-color: @bg-color-2;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#custom-weather :hover {
+    border-bottom: 3px solid @fg-color;
+}
+
+#battery {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-2;
+    color: @fg-color;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#battery.charging {
+    color: @fg-color;
+    background-color: @bg-color-0;
+}
+
+#battery.warning:not(.charging) {
+    color: @alert-fg-color;
+    border-bottom: 3px solid @alert-bg-color;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @alert-bg-color;
+    color: @fg-color;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-2;
+    color: @fg-color;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#network.linked {
+    border-bottom: 3px solid @bg-color-1;
+}
+
+#network.disconnected {
+    border-bottom: 3px solid @alert-bg-color;
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-2;
+    color: @fg-color;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#pulseaudio.muted {
+    background-color: @inactive-bg-color;
+    color: @fg-color;
+}
+
+#backlight {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-2;
+    color: @fg-color;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#cpu {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-2;
+    color: @fg-color;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#memory {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-2;
+    color: @fg-color;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#idle_inhibitor {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: @bg-color-2;
+    color: @fg-color;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#idle_inhibitor.activated {
+    background-color: @inactive-bg-color;
+    color: @fg-color;
+    border-bottom: 3px solid @fg-color;
+}
+
+@keyframes blink {
+    to {
+        background-color: @fg-color;
+        color: @bg-color-0;
+    }
+}
+
+label:focus {
+    background-color: @bg-color-0;
+}
