@@ -1,0 +1,14 @@
+{
+  "load_extensions": {
+    "vim_binding/vim_binding": true,
+    "nbextensions_configurator/config_menu/main": true,
+    "contrib_nbextensions_help_item/main": true,
+    "toggle_all_line_numbers/main": true,
+    "code_prettify/autopep8": true
+  },
+  "Cell": {
+    "cm_config": {
+      "lineNumbers": true
+    }
+  }
+}
