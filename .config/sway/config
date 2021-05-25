@@ -12,7 +12,7 @@ exec mako
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 ### Variables
-set $lock /home/pinselimo/.local/bin/scripts/lock.sh
+set $lock /home/pinselimo/.local/bin/lock.sh
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4

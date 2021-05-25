@@ -12,7 +12,8 @@
 
     #
     # Change color theme
-    bindsym $mod+Shift+t exec /home/pinselimo/Python/utils/set_theme.py
+    # This is also used by a Gnome Extension so its located in .local/bin
+    bindsym $mod+Shift+t exec /home/pinselimo/.local/bin/set_theme.py
 
     # Lock the screen
     bindsym --no-repeat $mod+Alt+l exec $lock
