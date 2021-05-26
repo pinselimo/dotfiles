@@ -34,9 +34,12 @@ window#waybar {
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
+button:hover {
     background: rgba(0, 0, 0, 0.2);
     box-shadow: inherit;
+}
+
+#workspaces button:hover {
     border-bottom: 3px solid @bg-color-3;
 }
 
@@ -57,12 +60,24 @@ window#waybar {
     border-bottom: 3px solid @bg-color-3;
 }
 
-#custom-clock {
+#custom-dice {
     padding: 0 10px;
     margin: 0 4px;
     color: @fg-color;
     background-color: @bg-color-2;
     border-bottom: 3px solid @bg-color-3;
+}
+
+#custom-clock {
+    margin: 0 4px;
+    padding: 0 10px;
+    color: @fg-color;
+    background-color: @bg-color-2;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#custom-clock:hover {
+    border-bottom: 3px solid @fg-color;
 }
 
 #custom-weather {
@@ -73,7 +88,7 @@ window#waybar {
     border-bottom: 3px solid @bg-color-3;
 }
 
-#custom-weather :hover {
+#custom-weather:hover {
     border-bottom: 3px solid @fg-color;
 }
 
@@ -121,6 +136,10 @@ window#waybar {
     border-bottom: 3px solid @alert-bg-color;
 }
 
+#network:hover {
+    border-bottom: 3px solid @fg-color;
+}
+
 #pulseaudio {
     padding: 0 10px;
     margin: 0 4px;
@@ -132,6 +151,10 @@ window#waybar {
 #pulseaudio.muted {
     background-color: @inactive-bg-color;
     color: @fg-color;
+}
+
+#pulseaudio:hover {
+    border-bottom: 3px solid @fg-color;
 }
 
 #backlight {
@@ -150,12 +173,20 @@ window#waybar {
     border-bottom: 3px solid @bg-color-3;
 }
 
+#cpu:hover {
+    border-bottom: 3px solid @fg-color;
+}
+
 #memory {
     padding: 0 10px;
     margin: 0 4px;
     background-color: @bg-color-2;
     color: @fg-color;
     border-bottom: 3px solid @bg-color-3;
+}
+
+#memory:hover {
+    border-bottom: 3px solid @fg-color;
 }
 
 #idle_inhibitor {
@@ -177,8 +208,4 @@ window#waybar {
         background-color: @fg-color;
         color: @bg-color-0;
     }
-}
-
-label:focus {
-    background-color: @bg-color-0;
 }
