@@ -7,7 +7,7 @@
     "margin-bottom":5,
 
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["custom/weather", "custom/clock"],
+    "modules-center": ["custom/weather", "custom/dice", "custom/clock"],
     "modules-right": ["backlight", "pulseaudio", "network", "cpu", "memory", "idle_inhibitor", "battery"],
 
     "sway/mode": {
@@ -22,14 +22,16 @@
         "tooltip": false
     },
     "custom/clock": {
-        "exec": "date '+%H : %M : %S'",
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/clock.fish",
         "interval": 1,
-        "tooltip": false
+        "tooltip": true,
+        "on-click": "firefox 'https://calendar.google.com/'"
     },
     "battery": {
         "format": "{capacity}% {icon}",
         "format-alt": "{time} {icon}",
-        "format-full": "{icon} ",
+        "format-full": "",
         "format-warning": "",
         "format-critical": "",
         "format-icons": ["", "", "", "", "", "", "", "", "", ""],
@@ -103,11 +105,17 @@
         "exec-if": "ping en.wttr.in -c1",
         "on-click": "firefox 'https://google.com/search?q=Weather%20Graz'"
     },
+    "custom/dice": {
+        "exec": "fish -c \"echo (random choice \"\" \"\" \"\" \"\" \"\" \"\")\"",
+        "interval": "once",
+        "on-click": "",
+        "tooltip": false
+    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "",
+            "deactivated": ""
         },
         "tooltip": false
     }
