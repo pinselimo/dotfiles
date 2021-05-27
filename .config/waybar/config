@@ -11,7 +11,8 @@
     "modules-right": ["backlight", "pulseaudio", "network", "cpu", "memory", "idle_inhibitor", "battery"],
 
     "sway/mode": {
-        "format": " {}"
+        "format": " {}",
+        "tooltip": false
     },
     "sway/workspaces": {
         "format": "{name}",
