@@ -6,7 +6,11 @@
 exec wl-paste -t text --watch clipman store
 exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
 
+# Notifications
 exec mako
+
+# Automatic brightness
+exec wluma
 
 ### Set environment for pipewire support
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
@@ -106,9 +110,5 @@ include /home/pinselimo/.config/sway/config.d/*
 include /etc/sway/config.d/*
 
 bar {
-# Self-compiled:
-#    swaybar_command /home/pinselimo/CPP/Waybar/build/waybar
-#
-# From Ubuntu Repos:
     swaybar_command waybar
 }
