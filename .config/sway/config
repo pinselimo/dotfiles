@@ -105,9 +105,7 @@ input * {
 # Read `man 5 sway-input` for more information about this section.
 
 # Default workspaces for common programs
-# assign [class="^Firefox$"] $ws2
-# assign [class="^code-oss$"] $ws2
-# assign [class="^Terminal$"] 1:2
+assign [app_id="firefox"] workspace 2
 
 include /home/pinselimo/.config/sway/config.d/*
 
@@ -116,3 +114,6 @@ include /etc/sway/config.d/*
 bar {
     swaybar_command waybar
 }
+
+# Autostart what I need anyways
+exec firefox
