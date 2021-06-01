@@ -33,8 +33,8 @@
         "format": "{capacity}% {icon}",
         "format-alt": "{time} {icon}",
         "format-full": "",
-        "format-warning": "",
-        "format-critical": "",
+        "format-warning": "{capacity} ",
+        "format-critical": "{capacity} ",
         "format-icons": ["", "", "", "", "", "", "", "", "", ""],
         // "charging" : ["","","","","","",""],
         "interval": 30,
@@ -71,7 +71,8 @@
             "bluetooth": "",
             "default": ["","",""]
         },
-        "scroll-step": 1,
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
         "on-click": "pavucontrol",
         "tooltip": false
     },
