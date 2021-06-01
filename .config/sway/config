@@ -3,6 +3,11 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
+#
+
+workspace_auto_back_and_forth yes
+
+#
 exec wl-paste -t text --watch clipman store
 exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
 
@@ -103,7 +108,6 @@ input * {
 # assign [class="^Firefox$"] $ws2
 # assign [class="^code-oss$"] $ws2
 # assign [class="^Terminal$"] 1:2
-
 
 include /home/pinselimo/.config/sway/config.d/*
 
