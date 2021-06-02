@@ -2,6 +2,9 @@ let mapleader="\<SPACE>"
 
 set cursorline
 
+hi ColorColumn ctermbg=DarkMagenta
+call matchadd('ColorColumn', '\%81v', 100)
+
 " Remove underline:
 hi CursorLine ctermbg=DarkMagenta
 hi clear CursorLine
