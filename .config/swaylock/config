@@ -4,19 +4,19 @@ screenshots
 indicator
 clock
 show-failed-attempts
+hide-keyboard-layout
 indicator-radius=200
 indicator-thickness=20
 effect-blur=3x5
 effect-vignette=0.9:0.5
-line-uses-ring
 grace=2
 fade-in=0.2
 # Base colors
-key-hl-color=a26597
-separator-color=00000000
-line-color=00000000
+key-hl-color=714360
+separator-color=808080
+line-color=808080
 inside-color=1e0e2a80
-ring-color=714360
+ring-color=808080
 text-color=714360
 # Verification
 inside-ver-color=1e0e2a
