@@ -12,6 +12,9 @@ hi clear CursorLine
 " To highlight only line number:
 hi CursorLineNR ctermbg=DarkCyan
 
+" Support clipboard across instances
+set clipboard^=unnamed
+
 set showmatch
 set number
 set tabstop=4
