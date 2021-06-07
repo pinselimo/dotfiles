@@ -1,5 +1,6 @@
-{
+[{
     "layer": "top",
+    "output": "eDP-1",
     "position": "bottom",
     "height": 27,
     "margin-left":15,
@@ -9,7 +10,6 @@
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/weather", "custom/dice", "custom/clock"],
     "modules-right": ["backlight", "pulseaudio", "network", "cpu", "memory", "idle_inhibitor", "battery"],
-
     "sway/mode": {
         "format": " {}",
         "tooltip": false
@@ -121,4 +121,14 @@
         },
         "tooltip": false
     }
-}
+},
+{
+    "layer": "overlay",
+    "output": "HDMI-A-1",
+    "position": "bottom",
+    "height": 27,
+    "margin-left":15,
+    "margin-right":15,
+    "margin-top":5,
+    "modules-right": ["sway/workspaces"],
+}]
