@@ -125,10 +125,16 @@
 {
     "layer": "overlay",
     "output": "HDMI-A-1",
-    "position": "bottom",
+    "position": "top",
     "height": 27,
     "margin-left":15,
     "margin-right":15,
     "margin-top":5,
-    "modules-right": ["sway/workspaces"],
+    "name":"external",
+    "modules-right": ["sway/workspaces#external"],
+
+    "sway/workspaces#external": {
+        "format": "{name}",
+        "disable-scroll": true
+    },
 }]
