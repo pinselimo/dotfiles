@@ -29,18 +29,18 @@
     bindsym $mod+d exec $bigmenu
 
     # Media keys
-    bindsym XF86AudioRaiseVolume exec /home/pinselimo/.config/sway/scripts/volume.sh 'up'
-    bindsym XF86AudioLowerVolume exec /home/pinselimo/.config/sway/scripts/volume.sh 'down'
-    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym --locked XF86AudioRaiseVolume exec /home/pinselimo/.config/sway/scripts/volume.sh 'up'
+    bindsym --locked XF86AudioLowerVolume exec /home/pinselimo/.config/sway/scripts/volume.sh 'down'
+    bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-    bindsym XF86MonBrightnessUp exec light -A 4
-    bindsym XF86MonBrightnessDown exec light -U 4
+    bindsym --locked XF86MonBrightnessUp exec light -A 4
+    bindsym --locked XF86MonBrightnessDown exec light -U 4
 
     # Extra media buttons
     bindsym $mod+Shift+W exec light -A 0.5
-    bindsym $mod+Shift+A exec playerctl previous
-    bindsym $mod+Shift+S exec playerctl play-pause
-    bindsym $mod+Shift+D exec playerctl next
+    bindsym --locked $mod+Shift+A exec playerctl previous
+    bindsym --locked $mod+Shift+S exec playerctl play-pause
+    bindsym --locked $mod+Shift+D exec playerctl next
 
     # Clipboard
     bindsym $mod+c exec clipman pick -t wofi
