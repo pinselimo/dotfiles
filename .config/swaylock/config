@@ -12,12 +12,12 @@ effect-vignette=0.9:0.5
 grace=2
 fade-in=0.2
 # Base colors
-key-hl-color=714360
+key-hl-color=1e0e2a
 separator-color=808080
 line-color=808080
 inside-color=1e0e2a80
 ring-color=808080
-text-color=714360
+text-color=dddddd
 # Verification
 inside-ver-color=1e0e2a
 text-ver-color=714360
