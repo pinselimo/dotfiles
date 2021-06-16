@@ -83,7 +83,15 @@ Plug '/home/pinselimo/vim/vim-monkey-c'
 " HTML Tag Closing
 Plug 'alvan/vim-closetag'
 
+" Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
 
 " Make coc popups readable
 hi link CocFloating markdown
+
+" Airline config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='violet'
