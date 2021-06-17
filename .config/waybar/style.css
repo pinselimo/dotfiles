@@ -63,6 +63,10 @@ button:hover {
     background-color: rgba(0,0,0,0.7);
 }
 
+#workspaces.external button {
+    border: 3px solid transparent;
+}
+
 #workspaces.external button.focused {
     border: 3px solid @bg-color-2;
 }
