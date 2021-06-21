@@ -1,6 +1,6 @@
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval /home/pinselimo/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+eval /home/pinselimo/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
 alias rm='rm -i'
@@ -17,4 +17,5 @@ fish_add_path /home/pinselimo/.local/bin/
 fish_add_path /home/pinselimo/.cabal/bin/
 fish_add_path /home/pinselimo/.cargo/bin/
 fish_add_path /home/pinselimo/.dynamic-colors/bin/
-fish_add_path /home/pinselimo/anaconda3/bin/
+fish_add_path /home/pinselimo/miniconda3/bin/
+fish_add_path /home/pinselimo/.nix-profile/bin/
