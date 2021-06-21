@@ -54,7 +54,7 @@
             "linked": [""],
             "disconnected": [""]
         },
-        "on-click": "terminator -e nmtui",
+        "on-click": "footclient nmtui",
         "tooltip": false
     },
     "pulseaudio": {
@@ -81,14 +81,14 @@
         "format": "",
         "format-alt-click": "click-right",
         "tooltip": false,
-        "on-click": "gnome-system-monitor -r"
+        "on-click": "footclient htop"
     },
     "memory": {
         "format-alt": " {percentage}",
         "format": "",
         "format-alt-click": "click-right",
         "tooltip": false,
-        "on-click": "gnome-system-monitor -r"
+        "on-click": "footclient htop"
     },
     "backlight": {
         "format-alt": "{icon} {percent}",
