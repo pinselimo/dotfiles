@@ -11,7 +11,7 @@
     "modules-center": ["custom/weather", "custom/dice", "custom/clock"],
     "modules-right": ["backlight", "pulseaudio", "network", "cpu", "memory", "idle_inhibitor", "battery"],
     "sway/mode": {
-        "format": " {}",
+        "format": "舘 {}",
         "tooltip": false
     },
     "sway/workspaces": {
@@ -32,11 +32,10 @@
     "battery": {
         "format": "{capacity}% {icon}",
         "format-alt": "{time} {icon}",
-        "format-full": "",
-        "format-warning": "{capacity} ",
-        "format-critical": "{capacity} ",
-        "format-icons": ["", "", "", "", "", "", "", "", "", ""],
-        // "charging" : ["","","","","","",""],
+        "format-full": "",
+        "format-warning": "{capacity} ",
+        "format-critical": "{capacity} ",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
         "interval": 30,
         "states": {
             "warning": 20,
@@ -49,10 +48,11 @@
         "format-alt": "{icon} {signalStrength} \"{essid}\"",
         "format-alt-click": "click-right",
         "format-icons": {
-            "wifi": ["", "" ,""],
-            "ethernet": [""],
-            "linked": [""],
-            "disconnected": [""]
+            // "wifi": ["", "礪" ,"閭"],
+            "wifi": [""],
+            "ethernet": ["囹"],
+            "linked": ["驪"],
+            "disconnected": ["睊"]
         },
         "on-click": "footclient nmtui",
         "tooltip": false
@@ -61,15 +61,15 @@
         "format-alt": "{icon} {volume}",
         "format": "{icon}",
         "format-alt-click": "click-right",
-        "format-muted": "",
-        "format-source": "",
-        "format-source-muted": "",
+        "format-muted": "婢",
+        "format-source": "",
+        "format-source-muted": "",
         "format-icons": {
-            "phone": ["",""],
-            "headphone": "",
-            "headset": "",
-            "bluetooth": "",
-            "default": ["","",""]
+            "phone": ["",""],
+            "headphone": "",
+            "headset": "",
+            "bluetooth": "",
+            "default": ["奄","奔","墳"]
         },
         "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
@@ -77,15 +77,15 @@
         "tooltip": false
     },
     "cpu": {
-        "format-alt": " {usage}",
-        "format": "",
+        "format-alt": "﬙ {usage}",
+        "format": "",
         "format-alt-click": "click-right",
         "tooltip": false,
         "on-click": "footclient htop"
     },
     "memory": {
-        "format-alt": " {percentage}",
-        "format": "",
+        "format-alt": " {percentage}",
+        "format": "",
         "format-alt-click": "click-right",
         "tooltip": false,
         "on-click": "footclient htop"
@@ -93,7 +93,7 @@
     "backlight": {
         "format-alt": "{icon} {percent}",
         "format": "{icon}",
-        "format-icons": ["", "", "", "", "", ""],
+        "format-icons": ["", "", "", "", "", ""],
         "on-scroll-down": "light -A 1",
         "on-scroll-up": "light -U 1"
     },
@@ -108,7 +108,7 @@
         "on-click": "firefox 'https://google.com/search?q=Weather%20Graz'"
     },
     "custom/dice": {
-        "exec": "fish -c \"echo (random choice \"\" \"\" \"\" \"\" \"\" \"\")\"",
+        "exec": "fish -c \"echo (random choice \"\" \"\" \"\" \"\" \"\" \"\")\"",
         "interval": "once",
         "on-click": "",
         "tooltip": false
@@ -116,8 +116,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "零",
+            "deactivated": "鈴"
         },
         "tooltip": false
     }
