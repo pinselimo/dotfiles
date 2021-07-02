@@ -87,6 +87,8 @@ Plug 'alvan/vim-closetag'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Nix
+Plug 'LnL7/vim-nix'
 call plug#end()
 
 " Make coc popups readable
