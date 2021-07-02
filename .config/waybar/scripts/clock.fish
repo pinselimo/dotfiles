@@ -1,5 +1,4 @@
-#!/usr/bin/fish
-
+#! /usr/bin/env fish
 begin
     set time (date '+%H : %M : %S')
     set day  (date '+%A %d. %B %Y')
