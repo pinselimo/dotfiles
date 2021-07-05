@@ -1,0 +1,10 @@
+prompt=Search...
+width=40%
+allow_images=true
+allow_markup=true
+term=foot
+hide_scroll=true
+insensitive=true
+parse_search=true
+location=2
+lines=5
