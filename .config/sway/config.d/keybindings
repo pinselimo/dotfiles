@@ -44,7 +44,7 @@
     bindsym --to-code --locked $mod+Shift+D exec playerctl next
 
     # Clipboard
-    bindsym --to-code $mod+c exec clipman pick -t wofi -T'--conf=/home/pinselimo/.config/wofi/config.clipman --style=/home/pinselimo/.config/wofi/style.clipman.css'
+    bindsym --to-code $mod+c exec clipman pick -t wofi -T'--conf=/home/pinselimo/.config/wofi/clipman.config --style=/home/pinselimo/.config/wofi/clipman.style.css'
 #
 # Basics:
 #
