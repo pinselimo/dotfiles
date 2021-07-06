@@ -13,20 +13,16 @@
     #
     # Change color theme
     # This is also used by a Gnome Extension so its located in .local/bin
-    bindsym $mod+Shift+t exec /home/pinselimo/.local/bin/set_theme.py
+    bindsym --to-code $mod+Shift+t exec /home/pinselimo/.local/bin/set_theme.py
 
     # Lock the screen
-    bindsym --no-repeat $mod+Alt+l exec $lock
+    bindsym --to-code --no-repeat $mod+Alt+l exec $lock
 
     # Dismiss a notification
-    bindsym $mod+Shift+x exec makoctl dismiss
-
-    # Toggle keyboard layout
-    exec setxkbmap de
-    bindsym --no-repeat $mod+Alt+Space exec /home/pinselimo/.config/sway/scripts/toggle_kbd.sh
+    bindsym --to-code $mod+Shift+x exec makoctl dismiss
 
     # Show rofi menu
-    bindsym $mod+d exec $bigmenu
+    bindsym --to-code $mod+d exec $bigmenu
 
     # Media keys
     bindsym --locked XF86AudioRaiseVolume exec /home/pinselimo/.config/sway/scripts/volume.sh 'up'
@@ -35,15 +31,20 @@
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     bindsym --locked XF86MonBrightnessUp exec light -A 4
     bindsym --locked XF86MonBrightnessDown exec light -U 4
+    bindsym XF86Keyboard exec swaymsg input 1:1:AT_Translated_Set_2_keyboard xkb_switch_layout next
+    bindsym XF86Favorites exec $bigmenu
+    bindsym XF86Display exec swaymsg output HDMI-A-1 toggle
+    # bindsym XF86Bluetooth
+    # bindsym XF86Tools
 
     # Extra media buttons
-    bindsym $mod+Shift+W exec light -A 0.5
-    bindsym --locked $mod+Shift+A exec playerctl previous
-    bindsym --locked $mod+Shift+S exec playerctl play-pause
-    bindsym --locked $mod+Shift+D exec playerctl next
+    bindsym --to-code $mod+Shift+W exec light -A 0.5
+    bindsym --to-code --locked $mod+Shift+A exec playerctl previous
+    bindsym --to-code --locked $mod+Shift+S exec playerctl play-pause
+    bindsym --to-code --locked $mod+Shift+D exec playerctl next
 
     # Clipboard
-    bindsym $mod+c exec clipman pick -t wofi
+    bindsym --to-code $mod+c exec clipman pick -t wofi -T'--conf=/home/pinselimo/.config/wofi/config.clipman --style=/home/pinselimo/.config/wofi/style.clipman.css'
 #
 # Basics:
 #
@@ -51,7 +52,7 @@
     bindsym --no-repeat $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym --to-code $mod+Shift+q kill
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -61,11 +62,10 @@
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Alt+c reload
+    bindsym --to-code $mod+Alt+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Alt+e exec swaymsg exit
-# exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym --to-code $mod+Alt+e exec swaynag -t warning -m 'Exit sway? ' -b 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -103,9 +103,14 @@
         bindsym $up mark --add "_swap", focus up, swap container with mark "_swap", focus up, unmark "_swap"
         bindsym $right mark --add "_swap", focus right, swap container with mark "_swap", focus right, unmark "_swap"
 
+        bindsym Left mark --add "_swap", focus left, swap container with mark "_swap", focus left, unmark "_swap"
+        bindsym Down mark --add "_swap", focus down, swap container with mark "_swap", focus down, unmark "_swap"
+        bindsym Up mark --add "_swap", focus up, swap container with mark "_swap", focus up, unmark "_swap"
+        bindsym Right mark --add "_swap", focus right, swap container with mark "_swap", focus right, unmark "_swap"
+
         # Return to default mode
         bindsym q mode "default"
         bindsym Return mode "default"
         bindsym Escape mode "default"
     }
-    bindsym $mod+Shift+y mode "swap"
+    bindsym --to-code $mod+y mode "swap"
