@@ -141,6 +141,7 @@ include /home/pinselimo/.config/sway/config.d/*
 include /etc/sway/config.d/*
 
 bar {
+    id 0
     swaybar_command waybar
 }
 
@@ -149,3 +150,5 @@ exec firefox
 
 # Add second Waybar since that doesn't seem to work with a list in its config
 exec_always waybar -c /home/pinselimo/.config/waybar/hdmi.config
+
+mouse_warping container
