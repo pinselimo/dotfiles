@@ -2,8 +2,8 @@
 #
 # Custom
 #
-    bindgesture --fingers=4 --no-repeat swipe:left workspace prev
-    bindgesture --fingers=4 --no-repeat swipe:right workspace next
+    bindgesture --fingers=4 --no-repeat swipe:right workspace prev
+    bindgesture --fingers=4 --no-repeat swipe:left workspace next
 
     bindgesture --fingers=3 --no-repeat swipe:up focus up
     bindgesture --fingers=3 --no-repeat swipe:down focus down
