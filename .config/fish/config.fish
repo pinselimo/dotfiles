@@ -1,5 +1,6 @@
 # Set Aliases
 alias rm='rm -I'
+alias vi='nvim'
 alias ipy='ipython'
 alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias nix-shell='nix-shell --run fish'
@@ -10,7 +11,7 @@ alias se='TERM=xterm sudo -e'
 set -x TF_CPP_MIN_LOG_LEVEL 2
 
 # Adjust path
-fish_add_path /home/pinselimo/.local/bin/
+#fish_add_path /home/pinselimo/.local/bin/
 fish_add_path /home/pinselimo/.dynamic-colors/bin/
 fish_add_path /home/pinselimo/.nix-profile/bin/
 
