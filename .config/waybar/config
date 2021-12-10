@@ -116,8 +116,11 @@
         "on-click": "firefox 'https://google.com/search?q=Weather%20Graz'"
     },
     "custom/squeekboard": {
-        "format": "",
-        "on-click": "/home/pinselimo/.config/waybar/scripts/squeekboard.fish",
+        "format": "{}",
+        "return-type": "json",
+        "interval": 2,
+	"exec": "~/.config/waybar/scripts/squeekboard_available.fish",
+        "on-click": "~/.config/waybar/scripts/squeekboard.fish",
         "tooltip": false
     },
     "custom/dice": {
