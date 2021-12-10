@@ -78,6 +78,18 @@ button:hover {
     border-bottom: 3px solid @fg-color;
 }
 
+#custom-squeekboard {
+    margin: 0 4px;
+    padding: 0 10px;
+    color: @fg-color;
+    background-color: @bg-color-2;
+    border-bottom: 3px solid @bg-color-3;
+}
+
+#custom-squeekboard:hover {
+    border-bottom: 3px solid @fg-color;
+}
+
 #custom-dice {
     padding: 0 10px;
     margin: 0 4px;

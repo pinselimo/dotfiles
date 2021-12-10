@@ -7,10 +7,11 @@
     "margin-right":15,
     "margin-bottom":5,
 
-    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-left":   ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/weather", "custom/dice", "custom/clock"],
-    "modules-right": ["custom/keyboard", "backlight", "pulseaudio", "network",
-                       "cpu", "memory", "idle_inhibitor", "battery"],
+    "modules-right":  ["custom/keyboard", "backlight", "pulseaudio", "network"
+                      , "cpu", "memory", "custom/squeekboard"
+		      , "idle_inhibitor", "battery"],
     "sway/mode": {
         "format": "舘 {}",
         "tooltip": false
@@ -113,6 +114,11 @@
         "exec": "~/.config/waybar/scripts/weather.sh Graz",
         "exec-if": "ping en.wttr.in -c1",
         "on-click": "firefox 'https://google.com/search?q=Weather%20Graz'"
+    },
+    "custom/squeekboard": {
+        "format": "",
+        "on-click": "/home/pinselimo/.config/waybar/scripts/squeekboard.fish",
+        "tooltip": false
     },
     "custom/dice": {
         "exec": "fish -c \"echo (random choice \"\" \"\" \"\" \"\" \"\" \"\")\"",
