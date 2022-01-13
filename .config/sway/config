@@ -6,6 +6,9 @@
 #
 #
 
+# TEST 
+exec lisgd -v -g "3,LR,*,*,R,notify-send swiped lr" -g "3,RL,R,*,R,notify-send swiped rl from right edge"
+
 ### Set environment for pipewire support
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment XDG_CURRENT_DESKTOP XDG_SESSION_TYPE
@@ -13,19 +16,17 @@ exec systemctl --user import-environment XDG_CURRENT_DESKTOP XDG_SESSION_TYPE
 # NixOS
 exec /run/current-system/sw/libexec/polkit-gnome-authentication-agent-1
 # Home Manager | pathsToLink is not needed
-exec ~/.nix-profile/libexec/polkit-gnome-authentication-agent-1
+#exec ~/.nix-profile/libexec/polkit-gnome-authentication-agent-1
 
 set $my_cursor Adwaita
 #ComixCursors-Green
 set $my_cursor_size 24
 
 seat seat0 xcursor_theme $my_cursor $my_cursor_size
-#
 
 workspace_auto_back_and_forth yes
 
-#
-exec wl-paste -t text --watch clipman store
+#exec wl-paste -t text --watch clipman store
 exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
 
 # Notifications
@@ -33,6 +34,10 @@ exec mako
 
 # Automatic brightness
 #exec wluma
+
+# Virtual keyboard
+bindswitch tablet:on exec squeekboard
+bindswitch tablet:off exec killall -r "\w+(queekboar)\w+"
 
 ### Variables
 set $lock /home/pinselimo/.local/bin/lock.sh
@@ -61,15 +66,15 @@ set $bigmenu wofi --show=drun | xargs swaymsg exec --
 # output * bg /usr/local/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output * bg /home/pinselimo/Pictures/geometric-lines-connections-network-25433-2560x1440.jpeg fill
 # output * bg /home/pinselimo/Pictures/Gold-Sulfur.jpg fill
-client.focused #ffffff #000000 #FFFFFF #a26597 #543c64
-client.unfocused #ffffff #000000 #FFFFFF #452645 #33243b
+client.focused #543c6499 #00000099 #AAAAAA #a26597 #543c64
+client.unfocused #33243b66 #00000066 #AAAAAA99 #452645 #33243b
 
 #
 # Example configuration:
 #
 output eDP-1 {
     resolution 2560x1440
-    scale 1.42
+    scale 1.5
     pos 0 0
 }
 #
@@ -149,6 +154,9 @@ bar {
 exec firefox
 
 # Add second Waybar since that doesn't seem to work with a list in its config
-exec_always waybar -c /home/pinselimo/.config/waybar/hdmi.config
+bar {
+    id 1
+    swaybar_command waybar -c /home/pinselimo/.config/waybar/hdmi.config
+}
 
 mouse_warping container
