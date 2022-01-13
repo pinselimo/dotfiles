@@ -1,4 +1,5 @@
 let mapleader="\<SPACE>"
+let maplocalleader="\\"
 
 set cursorline
 
@@ -89,6 +90,15 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Nix
 Plug 'LnL7/vim-nix'
+
+" Coq
+Plug 'whonore/Coqtail'
+
+" Idris
+Plug 'idris-hackers/idris-vim'
+
+" Agda
+Plug 'derekelkins/agda-vim'
 call plug#end()
 
 " Make coc popups readable
