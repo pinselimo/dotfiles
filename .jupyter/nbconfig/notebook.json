@@ -10,5 +10,9 @@
     "cm_config": {
       "lineNumbers": true
     }
+  },
+  "Notebook": {
+    "Header": false,
+    "Toolbar": true
   }
 }
