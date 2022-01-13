@@ -6,7 +6,8 @@ alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias nix-shell='nix-shell --run fish'
 alias android-studio='STUDIO_JDK=/usr/lib/jvm/java-11-openjdk-amd64/ /opt/android-studio/bin/studio.sh'
 alias se='TERM=xterm sudo -e'
-alias idris='rlwrap idris2'
+alias idris-old='rlwrap idris'
+alias idr='rlwrap --no-warnings idris2' 
 
 # Set Tensorflow log level lower 
 set -x TF_CPP_MIN_LOG_LEVEL 2
