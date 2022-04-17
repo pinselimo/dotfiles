@@ -4,17 +4,18 @@ alias vi='nvim'
 alias ipy='ipython'
 alias dotfiles='/usr/bin/env git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias nix-shell='nix-shell --run fish'
+alias nix-init='nix flake new -t github:nix-community/nix-direnv .'
 alias android-studio='STUDIO_JDK=/usr/lib/jvm/java-11-openjdk-amd64/ /opt/android-studio/bin/studio.sh'
 alias se='TERM=xterm sudo -e'
 alias idris-old='rlwrap idris'
-alias idr='rlwrap --no-warnings idris2' 
+alias idr='rlwrap --no-warnings idris2'
 alias ls='exa --git --icons --time-style long-iso --group-directories-first'
 alias df='duf'
 alias ps='procs'
 alias htop='gtop'
 alias cat='bat'
 
-# Set Tensorflow log level lower 
+# Set Tensorflow log level lower
 set -x TF_CPP_MIN_LOG_LEVEL 2
 
 # Adjust path
