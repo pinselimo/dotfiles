@@ -8,6 +8,11 @@ alias android-studio='STUDIO_JDK=/usr/lib/jvm/java-11-openjdk-amd64/ /opt/androi
 alias se='TERM=xterm sudo -e'
 alias idris-old='rlwrap idris'
 alias idr='rlwrap --no-warnings idris2' 
+alias ls='exa --git --icons --time-style long-iso --group-directories-first'
+alias df='duf'
+alias ps='procs'
+alias htop='gtop'
+alias cat='bat'
 
 # Set Tensorflow log level lower 
 set -x TF_CPP_MIN_LOG_LEVEL 2
@@ -23,3 +28,4 @@ thefuck --alias | source
 if test -n "$DESKTOP_SESSION"
     set -x (gnome-keyring-daemon --start | string split "=")
 end
+
