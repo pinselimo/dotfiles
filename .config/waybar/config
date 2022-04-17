@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "output": "eDP-1",
     "position": "bottom",
     "height": 27,
@@ -11,7 +11,7 @@
     "modules-center": ["custom/weather", "custom/dice", "custom/clock"],
     "modules-right":  ["custom/keyboard", "backlight", "pulseaudio", "network"
                       , "cpu", "memory", "custom/squeekboard"
-		      , "idle_inhibitor", "battery"],
+                      , "idle_inhibitor", "battery"],
     "sway/mode": {
         "format": "舘 {}",
         "tooltip": false
@@ -83,14 +83,14 @@
         "format": "",
         "format-alt-click": "click-right",
         "tooltip": false,
-        "on-click": "footclient htop"
+        "on-click": "footclient gtop"
     },
     "memory": {
         "format-alt": " {percentage}",
         "format": "",
         "format-alt-click": "click-right",
         "tooltip": false,
-        "on-click": "footclient htop"
+        "on-click": "footclient gtop"
     },
     "backlight": {
         "format-alt": "{icon} {percent}",
@@ -119,7 +119,7 @@
         "format": "{}",
         "return-type": "json",
         "interval": 2,
-	"exec": "~/.config/waybar/scripts/squeekboard_available.fish",
+        "exec": "~/.config/waybar/scripts/squeekboard_available.fish",
         "on-click": "~/.config/waybar/scripts/squeekboard.fish",
         "tooltip": false
     },
