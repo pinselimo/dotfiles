@@ -2,18 +2,13 @@
 #
 # Custom
 #
-    bindgesture --fingers=4 --no-repeat swipe:right workspace prev
-    bindgesture --fingers=4 --no-repeat swipe:left workspace next
+    #bindgesture --fingers=4 --no-repeat swipe:right workspace prev
+    #bindgesture --fingers=4 --no-repeat swipe:left workspace next
 
-    bindgesture --fingers=3 --no-repeat swipe:up focus up
-    bindgesture --fingers=3 --no-repeat swipe:down focus down
-    bindgesture --fingers=3 --no-repeat swipe:left focus left
-    bindgesture --fingers=3 --no-repeat swipe:right focus right
-
-    #
-    # Change color theme
-    # This is also used by a Gnome Extension so its located in .local/bin
-    bindsym --to-code $mod+Shift+t exec /home/pinselimo/.local/bin/set_theme.py
+    #bindgesture --fingers=3 --no-repeat swipe:up focus up
+    #bindgesture --fingers=3 --no-repeat swipe:down focus down
+    #bindgesture --fingers=3 --no-repeat swipe:left focus left
+    #bindgesture --fingers=3 --no-repeat swipe:right focus right
 
     # Lock the screen
     bindsym --to-code --no-repeat $mod+Alt+l exec $lock
