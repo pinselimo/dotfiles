@@ -118,6 +118,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
 input * {
         xkb_layout "de,de(bone)"
+        xkb_options altwin:prtsc_rwin
 }
 
 # Toggle keyboard layout
