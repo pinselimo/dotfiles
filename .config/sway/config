@@ -40,7 +40,7 @@ bindswitch tablet:on exec squeekboard
 bindswitch tablet:off exec killall -r "\w+(queekboar)\w+"
 
 ### Variables
-set $lock /home/pinselimo/.local/bin/lock.sh
+set $lock /home/pinselimo/.config/sway/scripts/lock.sh
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
