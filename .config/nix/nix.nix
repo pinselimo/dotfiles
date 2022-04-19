@@ -2,7 +2,7 @@
 {
   nix = {
     autoOptimiseStore = true;
-    package = pkgs.nixFlakes;
+    package = pkgs.nix_2_7;
     extraOptions = ''
       experimental-features = nix-command flakes
       keep-outputs = true
