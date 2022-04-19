@@ -1,8 +1,4 @@
-{ config, pkgs, ... }:
-let
-  unstable = import <nixos-unstable> {};
-in {
-  # List packages installed in system profile. To search, run:
+{ config, pkgs, ... }: {
   environment = {
     systemPackages = let
       defaultPythonPackages = pythonPackages: with pythonPackages; [
@@ -19,41 +15,14 @@ in {
         haskell-language-server
       ];
     in with pkgs; [
+      # terminal basics
       locale
       fish
       bash
       foot
       killall
-      thefuck
       wget
-      firefox-esr-wayland
       gitFull
-      wl-clipboard
-      polkit_gnome
-      gnome3.adwaita-icon-theme
-      xdg-utils
-      imv
-      #unstable.obs-studio
-      #unstable.obs-studio-plugins.wlrobs
-      krita-beta
-      libwacom
-      #ncspot
-      #cava
-      (python39.withPackages defaultPythonPackages)
-      pidgin-with-plugins
-      (ghc.withPackages defaultHaskellPackages)
-      cabal-install
-      idris2
-      (agda.withPackages (p: [ p.standard-library ]))
-      emacs
-      rlwrap
-      zotero
-      libreoffice
-      inkscape
-      pipewire
-      nodejs # for CoC
-      xournalpp
-      calibre
 
       # Modern Unix
       exa
@@ -64,28 +33,57 @@ in {
       gping
       procs
       xh # httpie
+      thefuck
 
-      # Nix shell replacement
+      # flakey nix-shell replacement
       direnv
       nix-direnv
 
-      # User
-      swaylock-effects
-      light
-      wl-clipboard
-      clipman
-      mako
-      wofi
-      waybar
-      pavucontrol
-      libnotify
-      openconnect
+      # pl basics
+      (python39.withPackages defaultPythonPackages)
+      (ghc.withPackages defaultHaskellPackages)
+      cabal-install
+      idris2
+      rlwrap
+      (agda.withPackages (p: [ p.standard-library ]))
+      emacs
+      nodejs # for CoC
       coq
       netlogo
-      gnome.seahorse
+
+      # graphical UI basics
+      firefox-esr-wayland
+      libwacom
+      polkit_gnome
+      gnome3.adwaita-icon-theme
+      xdg-utils
+      imv
+      pipewire
+      swaylock-effects
+      light
+      clipman
+      mako
+      libnotify
+      openconnect
       gnome.gnome-keyring
       libsecret
+      wofi
+      waybar
+      wl-clipboard
       wl-mirror
+
+      # apps
+      pavucontrol
+      gnome.seahorse
+      krita-beta
+      #ncspot
+      #cava
+      pidgin-with-plugins
+      zotero
+      libreoffice
+      inkscape
+      xournalpp
+      calibre
     ];
 
     pathsToLink = [ "/libexec" "/share/nix-dienv" ];
