@@ -96,10 +96,10 @@ gaps bottom -3
 # Example configuration:
 #
 exec swayidle -w \
-          timeout 600 'swaylock -f' \
+          timeout 600 '/home/pinselimo/.config/sway/scripts/lock.sh' \
           timeout 1200 'swaymsg "output * dpms off"' \
                resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f'
+          before-sleep '/home/pinselimo/.config/sway/scripts/lock.sh'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
