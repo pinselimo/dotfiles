@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, vim-monkey-c, ... }:
 {
   programs.neovim = {
     enable = true;
@@ -71,7 +71,7 @@
         vim-fish
         (pkgs.vimUtils.buildVimPlugin {
           name = "vim-monkey-c";
-          src = /home/pinselimo/vim/vim-monkey-c;
+          src = vim-monkey-c;
         })
         vim-haskellConcealPlus
         lightspeed-nvim
