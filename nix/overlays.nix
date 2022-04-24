@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, pinselimo-waybar, ... }:
 {
   nixpkgs.overlays = [
     # LISGD
@@ -19,12 +19,7 @@
     (final: prev: {
       waybar = prev.waybar.overrideAttrs (old : {
         version = "0.9.12";
-        src = pkgs.fetchFromGitHub {
-          owner = "pinselimo";
-          repo = "Waybar";
-          rev = "da174612c5364528ce305c32e1b6c6be4c7ed6bf";
-          sha256 = "1ahasnfgi2ljz5nqd27fnd4g8fzi4mqb9m26d6ik2ib1lnd8xbgh";
-        };
+        src = pinselimo-waybar;
         buildInputs = [ pkgs.libevdev pkgs.libxkbcommon pkgs.catch2 pkgs.upower ] ++ prev.waybar.buildInputs ;
       });
     })
