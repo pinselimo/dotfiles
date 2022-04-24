@@ -13,6 +13,7 @@
       ];
       defaultHaskellPackages = haskellPackages: with haskellPackages; [
         haskell-language-server
+        hoogle
       ];
     in with pkgs; [
       # terminal basics

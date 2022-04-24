@@ -69,6 +69,7 @@
         idris2-vim
         agda-vim
         vim-fish
+        vim-hoogle
         (pkgs.vimUtils.buildVimPlugin {
           name = "vim-monkey-c";
           src = vim-monkey-c;
