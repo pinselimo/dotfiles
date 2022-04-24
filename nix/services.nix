@@ -5,6 +5,7 @@
     fprintAuth = true;
   };
 
+  # For screen sharing
   xdg = {
     portal = {
       enable = true;
@@ -14,14 +15,20 @@
     };
   };
 
-  # List services that you want to enable:
   services = {
-    fprintd.enable = true;
+    # fprintd.enable = true;
+
+    greetd = {
+      enable = true;
+      settings.default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
+        user = "greeter";
+      };
+    };
 
     xserver = {
       # Configure keymap in X11
       layout = "de";
-      # services.xserver.xkbOptions = "eurosign:e";
       wacom.enable = true;
       # Enable touchpad support (enabled default in most desktopManager).
       libinput.enable = true;
