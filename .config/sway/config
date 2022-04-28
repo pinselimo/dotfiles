@@ -6,7 +6,7 @@
 #
 #
 
-# TEST 
+# TEST
 exec lisgd -v -g "3,LR,*,*,R,notify-send swiped lr" -g "3,RL,R,*,R,notify-send swiped rl from right edge"
 
 ### Set environment for pipewire support
@@ -155,9 +155,6 @@ bar {
 exec firefox
 
 # Add second Waybar since that doesn't seem to work with a list in its config
-bar {
-    id 1
-    swaybar_command waybar -c /home/pinselimo/.config/waybar/hdmi.config
-}
+exec waybar -c /home/pinselimo/.config/waybar/hdmi.config
 
 mouse_warping container
