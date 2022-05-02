@@ -154,7 +154,4 @@ bar {
 # Autostart what I need anyways
 exec firefox
 
-# Add second Waybar since that doesn't seem to work with a list in its config
-exec waybar -c /home/pinselimo/.config/waybar/hdmi.config
-
 mouse_warping container

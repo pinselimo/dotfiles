@@ -1,4 +1,4 @@
-{
+[{
     "layer": "bottom",
     "output": "eDP-1",
     "position": "bottom",
@@ -137,4 +137,22 @@
         },
         "tooltip": false
     }
+},
+{
+    "layer": "top",
+    "output": "HDMI-A-1",
+    "position": "top",
+    "height": 27,
+    "margin-left":15,
+    "margin-right":15,
+    "margin-top":5,
+    "name":"external",
+    "exclusive":false,
+    "modules-right": ["sway/workspaces#external"],
+
+    "sway/workspaces#external": {
+        "format": "{name}",
+        "disable-scroll": true
+    }
 }
+]
