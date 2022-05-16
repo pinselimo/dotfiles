@@ -15,6 +15,17 @@
         haskell-language-server
         hoogle
       ];
+      latex = with pkgs; texlive.combine {
+                inherit (texlive)
+                  scheme-small
+
+                  # additional latex libraries
+                  amsmath
+
+                  # build tools
+                  latexmk
+                  ;
+                };
     in with pkgs; [
       # terminal basics
       locale
@@ -51,6 +62,7 @@
       nodejs # for CoC
       coq
       netlogo
+      latex
 
       # graphical UI basics
       firefox-esr-wayland
@@ -85,6 +97,7 @@
       inkscape
       xournalpp
       calibre
+      zathura
     ];
 
     pathsToLink = [ "/libexec" "/share/nix-dienv" ];

@@ -9,6 +9,9 @@
     #withNodeJs = true; # For CoC
     configure = {
       customRC = ''
+        filetype plugin indent on
+        syntax enable
+
         let mapleader="\<SPACE>"
         let maplocalleader="\\"
 
@@ -61,7 +64,7 @@
         vim-airline-themes
         vim-gitgutter
         vim-closetag
-        coc-nvim coc-git coc-highlight coc-html coc-java coc-pyright
+        coc-nvim coc-git coc-highlight coc-html coc-java coc-pyright coc-vimtex
         nerdcommenter
         vim-closetag
         vim-nix
@@ -76,6 +79,7 @@
         })
         vim-haskellConcealPlus
         lightspeed-nvim
+        vimtex
       ];
     };
   };
