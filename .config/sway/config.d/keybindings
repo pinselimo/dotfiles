@@ -27,7 +27,7 @@
     bindsym --locked XF86MonBrightnessUp exec light -A 4
     bindsym --locked XF86MonBrightnessDown exec light -U 4
     bindsym XF86Keyboard exec swaymsg input 1:1:AT_Translated_Set_2_keyboard xkb_switch_layout next
-    bindsym XF86Favorites exec $bigmenu
+    bindsym XF86Favorites exec grim -t jpeg -g "$(slurp)" ~/Pictures/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
     bindsym XF86Display exec swaymsg output HDMI-A-1 toggle
     # bindsym XF86Bluetooth
     # bindsym XF86Tools
