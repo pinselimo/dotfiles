@@ -25,6 +25,8 @@
         xdg-desktop-portal-wlr # screensharing
         squeekboard # virtual keyboard
         lisgd # for touch input
+        grim # screenshots
+        slurp # screenshots
       ];
     };
   };
