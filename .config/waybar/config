@@ -148,7 +148,7 @@
     "margin-top":5,
     "name":"external",
     "exclusive":false,
-    "modules-right": ["sway/workspaces#external"],
+    "modules-center": ["sway/workspaces#external"],
 
     "sway/workspaces#external": {
         "format": "{name}",
