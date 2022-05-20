@@ -1,8 +1,18 @@
 { config, pkgs, ... }:
 {
-  security.pam.services.login = {
-    enableGnomeKeyring = true;
-    fprintAuth = true;
+  security = {
+    pam.services.login = {
+      enableGnomeKeyring = true;
+      fprintAuth = true;
+    };
+    sudo.enable = false;
+    doas = {
+      enable = true;
+      extraRules = [{
+        users = [ "pinselimo" ];
+        keepEnv = true;
+      }];
+    };
   };
 
   # For screen sharing
