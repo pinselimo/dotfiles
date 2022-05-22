@@ -3,7 +3,7 @@
   security = {
     pam.services.login = {
       enableGnomeKeyring = true;
-      fprintAuth = true;
+      # fprintAuth = true;
     };
     sudo.enable = false;
     doas = {
