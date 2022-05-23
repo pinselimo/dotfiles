@@ -2,14 +2,6 @@
 #
 # Custom
 #
-    #bindgesture --fingers=4 --no-repeat swipe:right workspace prev
-    #bindgesture --fingers=4 --no-repeat swipe:left workspace next
-
-    #bindgesture --fingers=3 --no-repeat swipe:up focus up
-    #bindgesture --fingers=3 --no-repeat swipe:down focus down
-    #bindgesture --fingers=3 --no-repeat swipe:left focus left
-    #bindgesture --fingers=3 --no-repeat swipe:right focus right
-
     # Lock the screen
     bindsym --to-code --no-repeat $mod+Alt+l exec $lock
 
@@ -26,6 +18,7 @@
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     bindsym --locked XF86MonBrightnessUp exec light -A 4
     bindsym --locked XF86MonBrightnessDown exec light -U 4
+
     bindsym XF86Keyboard exec swaymsg input 1:1:AT_Translated_Set_2_keyboard xkb_switch_layout next
     bindsym XF86Favorites exec grim -t jpeg -g "$(slurp)" ~/Pictures/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
     bindsym XF86Display exec swaymsg output HDMI-A-1 toggle
