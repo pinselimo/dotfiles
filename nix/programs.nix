@@ -27,6 +27,8 @@
         lisgd # for touch input
         grim # screenshots
         slurp # screenshots
+        avizo
+        libinput-gestures
       ];
     };
   };
