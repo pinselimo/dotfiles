@@ -11,7 +11,7 @@
         isNormalUser = true;
         home = "/home/pinselimo";
         description = "pinselimo";
-        extraGroups = [ "wheel" "networkmanager" "video" ];
+        extraGroups = [ "wheel" "networkmanager" "video" "input" ];
         passwordFile = "/etc/passwordFile";
       };
     };
