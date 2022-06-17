@@ -90,7 +90,7 @@
       pavucontrol
       gnome.seahorse
       krita-beta
-      #ncspot
+      ncspot
       #cava
       pidgin
       zotero
@@ -99,7 +99,14 @@
       xournalpp
       calibre
       zathura
-    ];
+      vlc
+      chromium
+      #falsisign
+    ] ++ (with pkgs.fishPlugins; [
+      done
+      forgit
+      pisces
+    ]);
 
     pathsToLink = [ "/libexec" "/share/nix-dienv" ];
     variables = {
