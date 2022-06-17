@@ -46,6 +46,7 @@
       procs
       xh # httpie
       thefuck
+      delta
 
       # flakey nix-shell replacement
       direnv

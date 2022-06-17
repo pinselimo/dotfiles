@@ -1,0 +1,22 @@
+[user]
+	email = s.plakolb@gmail.com
+	name = Simon Plakolb
+[core]
+	editor = nvim
+        pager = delta
+[pull]
+	rebase = false
+[credential]
+	helper = /run/current-system/sw/bin/git-credential-libsecret
+[init]
+	defaultBranch = main
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    light = false    # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+        syntax-theme = TwoDark
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
