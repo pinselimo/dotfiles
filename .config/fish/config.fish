@@ -19,8 +19,6 @@ alias cat='bat'
 set -x TF_CPP_MIN_LOG_LEVEL 2
 
 # Adjust path
-#fish_add_path /home/pinselimo/.local/bin/
-fish_add_path /home/pinselimo/.dynamic-colors/bin/
 fish_add_path /home/pinselimo/.nix-profile/bin/
 
 # What
