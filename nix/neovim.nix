@@ -15,18 +15,6 @@
         let mapleader="\<SPACE>"
         let maplocalleader="\\"
 
-        set cursorline
-
-        hi ColorColumn ctermbg=DarkMagenta
-        call matchadd('ColorColumn', '\%81v', 100)
-
-        " Remove underline:
-        hi CursorLine ctermbg=DarkMagenta
-        hi clear CursorLine
-
-        " To highlight only line number:
-        hi CursorLineNR ctermbg=DarkCyan
-
         " Support clipboard across instances
         set clipboard^=unnamed
 
@@ -38,7 +26,7 @@
         set gdefault
 
         nmap <Leader>s :%s//<Left><Left>
-        
+
         function! NumberToggle()
           if(&relativenumber == 1)
             set nornu
@@ -56,6 +44,21 @@
         let g:airline_theme='violet'
 
         set expandtab
+
+        let g:onedark_config = { 'transparent' : v:true }
+        colorscheme onedark
+
+        set cursorline
+
+        hi ColorColumn ctermbg=DarkMagenta
+        call matchadd('ColorColumn', '\%81v', 100)
+
+        " Remove underline:
+        hi CursorLine ctermbg=DarkMagenta
+        hi clear CursorLine
+
+        " To highlight only line number:
+        hi CursorLineNR ctermbg=DarkCyan
         '';
 
       packages.nix.start = with pkgs.vimPlugins; [
@@ -80,6 +83,7 @@
         vim-haskellConcealPlus
         lightspeed-nvim
         vimtex
+        onedark-nvim
       ];
     };
   };
