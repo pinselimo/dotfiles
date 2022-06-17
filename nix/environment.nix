@@ -91,7 +91,7 @@
       krita-beta
       #ncspot
       #cava
-      pidgin-with-plugins
+      pidgin
       zotero
       libreoffice
       inkscape

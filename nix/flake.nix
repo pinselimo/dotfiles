@@ -2,7 +2,7 @@
   description = "Pinselimo's flake based system configuration";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-21.11";
+    nixpkgs.url = "nixpkgs/nixos-22.05";
     #nixpkgs-unstable.url =  "nixpkgs/nixos-unstable";
 
     vim-monkey-c = {
