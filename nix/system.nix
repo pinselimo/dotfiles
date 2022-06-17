@@ -12,11 +12,6 @@
       # Define on which hard drive you want to install Grub.
       device = "/dev/nvme0n1"; # or "nodev" for efi only
       extraEntries = ''
-        menuentry "Ubuntu" {
-          search --set=ubuntu --fs-uuid e21e02de-0133-411a-ae77-bd7a272c0fdf
-          configfile "($ubuntu)/boot/grub/grub.cfg"
-        }
-
         menuentry "Windows 10" {
           chainloader (hd0,1)+1
         }
