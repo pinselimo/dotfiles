@@ -6,8 +6,8 @@
 #
 #
 
-# TEST
-exec lisgd -v -g "3,LR,*,*,R,notify-send swiped lr" -g "3,RL,R,*,R,notify-send swiped rl from right edge"
+# Add trackpad gesture support
+exec libinput-gestures
 
 ### Set environment for pipewire support
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
