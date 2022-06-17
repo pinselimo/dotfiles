@@ -20,7 +20,7 @@ exec /run/current-system/sw/libexec/polkit-gnome-authentication-agent-1
 
 set $my_cursor Adwaita
 #ComixCursors-Green
-set $my_cursor_size 24
+set $my_cursor_size 26
 
 seat seat0 xcursor_theme $my_cursor $my_cursor_size
 
