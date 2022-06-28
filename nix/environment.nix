@@ -109,7 +109,7 @@
       pisces
     ]);
 
-    pathsToLink = [ "/libexec" "/share/nix-dienv" ];
+    pathsToLink = [ "/libexec" "/share/nix-direnv" ];
     variables = {
       NIXOS_OZONE_WL = "1";
       EDITOR = "nvim";
