@@ -13,6 +13,7 @@
         keepEnv = true;
       }];
     };
+    rtkit.enable = true; # for PipeWire
   };
 
   # For screen sharing
@@ -50,10 +51,10 @@
     blueman.enable = true;
     pipewire = {
       enable = true;
-      # alsa.enable = true;
-      # alsa.support32Bit = true;
-      # jack.enable = true;
-      # pulse.enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      jack.enable = true;
+      pulse.enable = true;
       socketActivation = true;
     };
     # Enable the OpenSSH daemon.

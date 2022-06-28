@@ -72,7 +72,7 @@
       gnome3.adwaita-icon-theme
       xdg-utils
       imv
-      pipewire
+      pulseaudio
       swaylock-effects
       light
       clipman
