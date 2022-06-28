@@ -101,6 +101,7 @@
       zathura
       vlc
       chromium
+      signal-desktop
       #falsisign
     ] ++ (with pkgs.fishPlugins; [
       done
@@ -110,6 +111,7 @@
 
     pathsToLink = [ "/libexec" "/share/nix-dienv" ];
     variables = {
+      NIXOS_OZONE_WL = "1";
       EDITOR = "nvim";
       MOZ_ENABLE_WAYLAND = "1";
 
