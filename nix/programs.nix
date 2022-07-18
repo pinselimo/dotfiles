@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+  qt5.platformTheme = "gnome";
   programs = {
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -11,7 +12,6 @@
 
     fish.enable = true;
     light.enable = true;
-    qt5ct.enable = true;
 
     sway = {
       enable = true;
