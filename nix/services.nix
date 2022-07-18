@@ -27,8 +27,6 @@
   };
 
   services = {
-    # fprintd.enable = true;
-
     greetd = {
       enable = true;
       settings.default_session = {
