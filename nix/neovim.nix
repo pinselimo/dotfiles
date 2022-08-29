@@ -59,6 +59,9 @@
 
         " To highlight only line number:
         hi CursorLineNR ctermbg=DarkCyan
+
+        " Autocomplete COC using <tab>
+        inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "<tab>"
         '';
 
       packages.nix.start = with pkgs.vimPlugins; [
