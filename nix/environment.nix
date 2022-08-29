@@ -118,6 +118,11 @@
       # Java
       _JAVA_AWT_WM_NONREPARENTING = "1";
       _JAVA_OPTIONS = "-Dawt.useSystemAAFontSettings=lcd";
+
+      # done
+      __done_sway_ignore_visible = "1";
+      __done_notify_sound = "0";
+      __done_min_cmd_duration = "1000";
     };
   };
 }
