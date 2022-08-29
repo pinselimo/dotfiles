@@ -1,10 +1,8 @@
 { config, pkgs, ... }:
 {
   boot = {
-    #blacklistedKernelModules = [ "bluetooth" ];
     initrd.verbose = false;
     plymouth.enable = true;
-    # Use the GRUB 2 boot loader.
     loader.grub = {
       enable = true;
       version = 2;
