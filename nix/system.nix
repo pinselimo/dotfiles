@@ -23,6 +23,7 @@
     wireless.enable = false;  # Enables wireless support via wpa_supplicant. I use networkmanager instead.
     networkmanager = {
       enable = true;
+      insertNameservers = [ "1.1.1.1" "1.0.0.1" "8.8.8.8" "8.8.4.4" ];
       #dns = "none";
       ethernet.macAddress = "random";
       wifi = {
