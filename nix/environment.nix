@@ -103,10 +103,11 @@
       chromium
       signal-desktop
       #falsisign
+      jq # for fishPlugins.done
     ] ++ (with pkgs.fishPlugins; [
       done
       forgit
-      pisces
+      #pisces
     ]);
 
     pathsToLink = [ "/libexec" "/share/nix-direnv" ];
