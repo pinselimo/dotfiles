@@ -24,11 +24,11 @@
     networkmanager = {
       enable = true;
       #dns = "none";
-      #ethernet.macAddress = "random";
-      #wifi = {
+      ethernet.macAddress = "random";
+      wifi = {
         #backend = "iwd";
-        #macAddress = "random";
-      #};
+        macAddress = "random";
+      };
       plugins = [ pkgs.networkmanager-openvpn ];
     };
 
