@@ -12,16 +12,22 @@
     set $ws9 9
     set $ws10 10
 
-    bindsym $mod+1 workspace $ws1
-    bindsym $mod+2 workspace $ws2
-    bindsym $mod+3 workspace $ws3
-    bindsym $mod+4 workspace $ws4
-    bindsym $mod+5 workspace $ws5
-    bindsym $mod+6 workspace $ws6
-    bindsym $mod+7 workspace $ws7
-    bindsym $mod+8 workspace $ws8
-    bindsym $mod+9 workspace $ws9
-    bindsym $mod+0 workspace $ws10
+    set $map-touch-to-active swaymsg input type:touch map_to_output `swaymsg -t get_outputs | jq -r '.[] | select(.focused == true) | .name'`
+    set $map-pen-to-active swaymsg input type:tablet_tool map_to_output `swaymsg -t get_outputs | jq -r '.[] | select(.focused == true) | .name'`
+
+    exec $map-touch-to-active
+    exec $map-pen-to-active
+
+    bindsym $mod+1 workspace $ws1 ; exec "$map-touch-to-active; $map-pen-to-active"
+    bindsym $mod+2 workspace $ws2 ; exec "$map-touch-to-active; $map-pen-to-active"
+    bindsym $mod+3 workspace $ws3 ; exec "$map-touch-to-active; $map-pen-to-active"
+    bindsym $mod+4 workspace $ws4 ; exec "$map-touch-to-active; $map-pen-to-active"
+    bindsym $mod+5 workspace $ws5 ; exec "$map-touch-to-active; $map-pen-to-active"
+    bindsym $mod+6 workspace $ws6 ; exec "$map-touch-to-active; $map-pen-to-active"
+    bindsym $mod+7 workspace $ws7 ; exec "$map-touch-to-active; $map-pen-to-active"
+    bindsym $mod+8 workspace $ws8 ; exec "$map-touch-to-active; $map-pen-to-active"
+    bindsym $mod+9 workspace $ws9 ; exec "$map-touch-to-active; $map-pen-to-active"
+    bindsym $mod+0 workspace $ws10 ; exec "$map-touch-to-active; $map-pen-to-active"
     # Move focused container to workspace 
     bindsym $mod+Shift+1 move container to workspace $ws1
     bindsym $mod+Shift+2 move container to workspace $ws2
