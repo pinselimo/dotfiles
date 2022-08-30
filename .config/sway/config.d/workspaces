@@ -25,3 +25,18 @@
     bindsym $mod+Shift+0 move container to workspace 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+    workspace 1 output eDP-1
+    workspace 2 output eDP-1
+    workspace 4 output eDP-1
+    workspace 6 output eDP-1
+    workspace 8 output eDP-1
+    workspace 10 output eDP-1
+
+    workspace 3 output HDMI-A-1
+    workspace 5 output HDMI-A-1
+    workspace 7 output HDMI-A-1
+    workspace 9 output HDMI-A-1
+
+    # Default workspaces for common programs
+    assign [app_id="firefox"] workspace $ws2
+
