@@ -19,12 +19,14 @@
 
   networking = {
     hostName = "pinkthad"; # Define your hostname.
-    #nameservers = [ "1.1.1.1" "9.9.9.9" ];
-    wireless.enable = false;  # Enables wireless support via wpa_supplicant. I use networkmanager instead.
+    nameservers = [ "2606:4700:4700::1111" "2606:4700:4700::1001" "1.1.1.1" "1.0.0.1" "8.8.8.8" "8.8.4.4" ];
+    wireless = {
+      enable = false;  # Enables wireless support via wpa_supplicant. I use networkmanager instead.
+      #iwd.enable = true;
+    };
     networkmanager = {
       enable = true;
-      insertNameservers = [ "1.1.1.1" "1.0.0.1" "8.8.8.8" "8.8.4.4" ];
-      #dns = "none";
+      dns = "none"; # Avoid setting dns via dhcp
       ethernet.macAddress = "random";
       wifi = {
         #backend = "iwd";
