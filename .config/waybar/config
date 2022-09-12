@@ -9,7 +9,7 @@
 
     "modules-left":   ["sway/workspaces", "sway/mode"],
     "modules-center": [ "custom/weather", "custom/dice", "clock"],
-    "modules-right":  ["custom/keyboard", "backlight", "pulseaudio", "network"
+    "modules-right":  [ "sway/language", "backlight", "pulseaudio", "network"
                       , "cpu", "memory", "custom/squeekboard"
                       , "idle_inhibitor", "battery"],
     "sway/mode": {
@@ -100,11 +100,8 @@
         "on-scroll-down": "light -A 1",
         "on-scroll-up": "light -U 1"
     },
-    "custom/keyboard": {
-        "format": "{}",
-        "interval": 1,
-        "return-type": "json",
-        "exec": "~/.config/waybar/scripts/keyboard.fish",
+    "sway/language": {
+        "format": "{short} {variant}",
     },
     "custom/weather": {
         "format": "{}",
