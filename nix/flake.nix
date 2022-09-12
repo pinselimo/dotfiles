@@ -15,7 +15,7 @@
 
     pinselimo-waybar = {
       flake = false;
-      url = "github:pinselimo/Waybar?rev=da174612c5364528ce305c32e1b6c6be4c7ed6bf";
+      url = "github:pinselimo/Waybar?rev=61886b3b99e09fc2718b1866231fc4943b7d6e14";
     };
   };
 

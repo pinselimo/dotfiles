@@ -8,9 +8,9 @@
 
     (final: prev: {
       waybar = prev.waybar.overrideAttrs (old : {
-        version = "0.9.12";
+        version = "0.9.13";
         src = pinselimo-waybar;
-        buildInputs = [ pkgs.libevdev pkgs.libxkbcommon pkgs.catch2 pkgs.upower ] ++ prev.waybar.buildInputs ;
+        buildInputs = [ pkgs.libevdev pkgs.libxkbcommon pkgs.catch2 pkgs.upower pkgs.jack2 ] ++ prev.waybar.buildInputs ;
       });
     })
   ];
