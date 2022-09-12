@@ -98,7 +98,7 @@ button:hover {
     border-bottom: 3px solid @bg-color-3;
 }
 
-#custom-clock {
+#clock {
     margin: 0 4px;
     padding: 0 10px;
     color: @fg-color;
@@ -106,7 +106,7 @@ button:hover {
     border-bottom: 3px solid @bg-color-3;
 }
 
-#custom-clock:hover {
+#clock:hover {
     border-bottom: 3px solid @fg-color;
 }
 

@@ -8,7 +8,7 @@
     "margin-bottom":5,
 
     "modules-left":   ["sway/workspaces", "sway/mode"],
-    "modules-center": ["custom/weather", "custom/dice", "custom/clock"],
+    "modules-center": [ "custom/weather", "custom/dice", "clock"],
     "modules-right":  ["custom/keyboard", "backlight", "pulseaudio", "network"
                       , "cpu", "memory", "custom/squeekboard"
                       , "idle_inhibitor", "battery"],
@@ -24,13 +24,14 @@
         "max-length": 80,
         "tooltip": false
     },
-    "custom/clock": {
-        "return-type": "json",
-        "exec": "~/.config/waybar/scripts/clock.fish",
+
+    "clock": {
         "interval": 1,
-        "tooltip": true,
+        "format": "{:%H : %M : %S}",
+        "max-length": 25,
         "on-click": "firefox 'https://calendar.google.com/'"
     },
+
     "battery": {
         "format": "{capacity}% {icon}",
         "format-alt": "{time} {icon}",
