@@ -1,5 +1,7 @@
 [{
     "layer": "bottom",
+    "id" : "0",
+    "ipc" : true,
     "output": "eDP-1",
     "position": "bottom",
     "height": 27,
@@ -140,6 +142,8 @@
 },
 {
     "layer": "top",
+    "id" : "2",
+    "ipc" : true,
     "output": "HDMI-A-1",
     "position": "top",
     "height": 27,
