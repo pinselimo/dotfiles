@@ -12,8 +12,7 @@
     "modules-left":   ["sway/workspaces", "sway/mode"],
     "modules-center": [ "custom/weather", "custom/dice", "clock"],
     "modules-right":  [ "sway/language", "backlight", "pulseaudio", "network"
-                      , "cpu", "memory", "custom/squeekboard"
-                      , "idle_inhibitor", "battery"],
+                      , "cpu", "memory", "idle_inhibitor", "battery"],
     "sway/mode": {
         "format": "舘 {}",
         "tooltip": false
@@ -117,13 +116,126 @@
         "exec-if": "ping en.wttr.in -c1",
         "on-click": "firefox 'https://google.com/search?q=Weather%20Graz'"
     },
-    "custom/squeekboard": {
-        "format": "{}",
-        "return-type": "json",
-        "interval": 2,
-        "exec": "~/.config/waybar/scripts/squeekboard_available.fish",
-        "on-click": "~/.config/waybar/scripts/squeekboard.fish",
+    "custom/dice": {
+        "exec": "fish -c \"echo (random choice \"\" \"\" \"\" \"\" \"\" \"\")\"",
+        "interval": "once",
+        "on-click": "",
         "tooltip": false
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "零",
+            "deactivated": "鈴"
+        },
+        "tooltip": false
+    }
+},
+{
+    "layer": "bottom",
+    "id" : "1",
+    "ipc" : true,
+    "mode" : "invisible",
+
+    "output": "eDP-1",
+    "position": "bottom",
+    "height": 54,
+    "margin-left":15,
+    "margin-right":15,
+    "margin-bottom":5,
+    "name":"touchbar",
+    "exclusive":true,
+
+    "modules-left":   ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": [ "custom/weather", "custom/dice", "clock"],
+    "modules-right":  [ "custom/squeekboard", "backlight", "pulseaudio", "network"
+                      , "idle_inhibitor", "battery"],
+
+    "sway/mode": {
+        "format": "舘 {}",
+        "tooltip": false
+    },
+    "sway/workspaces": {
+        "format": "{name}",
+        "disable-scroll": true
+    },
+    "sway/window": {
+        "max-length": 80,
+        "tooltip": false
+    },
+
+    "clock": {
+        "interval": 1,
+        "format": "{:%H : %M : %S}",
+        "tooltip": true,
+        "tooltip-format": "{:%d - %m - %Y}",
+        "max-length": 25,
+        "on-click": "firefox 'https://calendar.google.com/'"
+    },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-alt": "{time} {icon}",
+        "format-full": "",
+        "format-warning": "{capacity} ",
+        "format-critical": "{capacity} ",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "interval": 30,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{icon} {signalStrength} \"{essid}\"",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            // "wifi": ["", "礪" ,"閭"],
+            "wifi": [""],
+            "ethernet": ["囹"],
+            "linked": ["驪"],
+            "disconnected": ["睊"]
+        },
+        "on-click": "footclient nmtui",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format-alt": "{icon} {volume}",
+        "format": "{icon}",
+        "format-alt-click": "click-right",
+        "format-muted": "婢",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "phone": ["",""],
+            "headphone": "",
+            "headset": "",
+            "bluetooth": "",
+            "default": ["奄","奔","墳"]
+        },
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "backlight": {
+        "format-alt": "{icon} {percent}",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", ""],
+        "on-scroll-down": "light -A 1",
+        "on-scroll-up": "light -U 1"
+    },
+    "custom/weather": {
+        "format": "{}",
+        "format-alt": "{alt}: {}",
+        "format-alt-click": "click-right",
+        "interval": 600,
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/weather.sh Graz",
+        "exec-if": "ping en.wttr.in -c1",
+        "on-click": "firefox 'https://google.com/search?q=Weather%20Graz'"
     },
     "custom/dice": {
         "exec": "fish -c \"echo (random choice \"\" \"\" \"\" \"\" \"\" \"\")\"",
@@ -137,6 +249,11 @@
             "activated": "零",
             "deactivated": "鈴"
         },
+        "tooltip": false
+    },
+    "custom/squeekboard": {
+        "format": "",
+        "on-click": "~/.config/waybar/scripts/squeekboard.fish",
         "tooltip": false
     }
 },
