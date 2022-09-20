@@ -35,9 +35,10 @@ exec mako
 # Automatic brightness
 #exec wluma
 
+exec squeekboard
 # Virtual keyboard
-bindswitch tablet:on exec squeekboard
-bindswitch tablet:off exec killall -r "\w+(queekboar)\w+"
+bindswitch tablet:on bar 1 mode dock; bar 0 mode invisible
+bindswitch tablet:off bar 1 mode invisible; bar 0 mode dock
 
 ### Variables
 set $lock /home/pinselimo/.config/sway/scripts/lock.sh
@@ -131,6 +132,17 @@ include /etc/sway/config.d/*
 bar {
     id 0
     swaybar_command waybar
+    position bottom
+    mode dock
+    modifier Mod4
+}
+
+bar {
+    id 1
+    swaybar_command ""
+    position bottom
+    mode invisible
+    modifier none
 }
 
 # Autostart what I need anyways
