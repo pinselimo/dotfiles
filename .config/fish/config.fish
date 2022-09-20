@@ -8,7 +8,6 @@ alias nix-init='nix flake new -t github:nix-community/nix-direnv .'
 alias idr='rlwrap -n -N idris2 -p contrib'
 alias ls='exa --git --icons --time-style long-iso --group-directories-first'
 alias df='duf'
-alias ps='procs'
 alias htop='gtop'
 alias cat='bat'
 
