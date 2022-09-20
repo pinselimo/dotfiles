@@ -268,12 +268,15 @@
     "margin-right":15,
     "margin-top":5,
     "name":"external",
+    "mode":"overlay",
+    "passthrough": true,
     "exclusive":false,
     "modules-center": ["sway/workspaces#external"],
 
     "sway/workspaces#external": {
         "format": "{name}",
-        "disable-scroll": true
+        "disable-scroll": true,
+        "disable-click": true
     }
 }
 ]
