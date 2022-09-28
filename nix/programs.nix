@@ -13,6 +13,8 @@
     fish.enable = true;
     light.enable = true;
 
+    wireshark.enable = true;
+
     sway = {
       enable = true;
       wrapperFeatures.gtk = true;
