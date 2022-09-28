@@ -35,10 +35,9 @@ exec mako
 # Automatic brightness
 #exec wluma
 
-exec squeekboard
 # Virtual keyboard
-bindswitch tablet:on bar 1 mode dock; bar 0 mode invisible
-bindswitch tablet:off bar 1 mode invisible; bar 0 mode dock
+bindswitch tablet:on exec squeekboard; bar 1 mode dock; bar 0 mode invisible
+bindswitch tablet:off exec 'killall -r "\w+(queekboar)\w+"'; bar 1 mode invisible; bar 0 mode dock
 
 ### Variables
 set $lock /home/pinselimo/.config/sway/scripts/lock.sh
