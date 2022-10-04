@@ -124,6 +124,7 @@
       __done_sway_ignore_visible = "1";
       __done_notify_sound = "0";
       __done_min_cmd_duration = "1000";
+      __done_expire_time = "3000";
     };
   };
 }

@@ -1,9 +1,14 @@
-{ config, pkgs, lib, pinselimo-waybar, ... }:
+{ config, pkgs, lib, pinselimo-waybar, expiry-done, ... }:
 {
   nixpkgs.overlays = [
     (final: prev: {
-      nix-direnv = prev.nix-direnv.override 
-        { enableFlakes = true; }; 
+      done = prev.done.overrideAttrs (old:
+        { src = expiry-done; });
+    })
+
+    (final: prev: {
+      nix-direnv = prev.nix-direnv.override
+        { enableFlakes = true; };
     })
 
     (final: prev: {

@@ -13,6 +13,11 @@
       url = "path:/home/pinselimo/vim/vim-monkey-c";
     };
 
+    expiry-done = {
+      flake = false;
+      url = "github:huafu/done?rev=78b812b2cb14ab8f0dc5ea3f3b4939c8b84e392f";
+    };
+
     pinselimo-waybar = {
       flake = false;
       url = "github:pinselimo/Waybar?rev=61886b3b99e09fc2718b1866231fc4943b7d6e14";
