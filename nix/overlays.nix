@@ -2,8 +2,12 @@
 {
   nixpkgs.overlays = [
     (final: prev: {
-      done = prev.done.overrideAttrs (old:
-        { src = expiry-done; });
+      fishPlugins.done = prev.fishPlugins.done.overrideAttrs (old: {
+        version = "1.16.6";
+        src = expiry-done;
+      });
+      fishPlugins.forgit = prev.fishPlugins.forgit;
+      fishPlugins.foreign-env = prev.fishPlugins.foreign-env;
     })
 
     (final: prev: {
