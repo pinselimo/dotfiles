@@ -55,4 +55,5 @@
 
     # Default workspaces for common programs
     assign [app_id="firefox"] workspace $ws2
+    assign [app_id="libreoffice"] workspace $ws4
 
