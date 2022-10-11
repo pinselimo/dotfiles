@@ -149,6 +149,6 @@ for_window [app_id="signal"] move window to scratchpad
 exec firefox
 exec signal-desktop
 # Start libreoffice if necessary
-exec /home/pinselimo/.config/sway/scripts/startLO.fish
+exec lora -u
 
 mouse_warping container
