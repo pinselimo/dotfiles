@@ -31,6 +31,7 @@
         slurp # screenshots
         avizo
         libinput-gestures
+        playerctl
       ];
     };
   };
