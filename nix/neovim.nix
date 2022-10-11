@@ -80,7 +80,8 @@
         vim-fish
         vim-hoogle
         (pkgs.vimUtils.buildVimPlugin {
-          name = "vim-monkey-c";
+          pname = "vim-monkey-c";
+          version = "1.0.0";
           src = vim-monkey-c;
         })
         vim-haskellConcealPlus
