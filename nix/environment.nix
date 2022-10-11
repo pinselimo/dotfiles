@@ -1,15 +1,16 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, lora, ... }: {
   environment = {
     systemPackages = let
       defaultPythonPackages = pythonPackages: with pythonPackages; [
         numpy
         matplotlib
         pandas
-        seaborn
         ipython
+        seaborn
         jupyter
-        jupyterlab
         autopep8
+
+        yq # like jq but for xml
       ];
       defaultHaskellPackages = haskellPackages: with haskellPackages; [
         haskell-language-server
@@ -26,7 +27,9 @@
                   latexmk
                   ;
                 };
-    in with pkgs; [
+    in
+    [ lora.packages.x86_64-linux.default ] ++
+    (with pkgs; [
       # terminal basics
       locale
       fish
@@ -104,7 +107,7 @@
       signal-desktop
       #falsisign
       jq # for fishPlugins.done
-    ] ++ (with pkgs.fishPlugins; [
+    ]) ++ (with pkgs.fishPlugins; [
       done
       forgit
       #pisces

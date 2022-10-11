@@ -13,6 +13,8 @@
       url = "path:/home/pinselimo/vim/vim-monkey-c";
     };
 
+    lora.url = "github:pinselimo/lora";
+
     expiry-done = {
       flake = false;
       url = "github:huafu/done?rev=78b812b2cb14ab8f0dc5ea3f3b4939c8b84e392f";
