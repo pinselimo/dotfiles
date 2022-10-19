@@ -9,10 +9,11 @@
     "margin-right":15,
     "margin-bottom":5,
 
-    "modules-left":   ["sway/workspaces", "sway/mode"],
-    "modules-center": [ "custom/weather", "custom/dice", "clock"],
+    "modules-left":   [ "sway/workspaces", "sway/mode" ],
+    "modules-center": [ "custom/weather", "custom/dice", "clock" ],
     "modules-right":  [ "sway/language", "backlight", "pulseaudio", "network"
-                      , "cpu", "memory", "idle_inhibitor", "battery"],
+                      , "cpu", "memory", "idle_inhibitor", "battery" ],
+
     "sway/mode": {
         "format": "舘 {}",
         "tooltip": false
