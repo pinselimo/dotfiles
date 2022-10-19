@@ -266,6 +266,11 @@
         "format": "",
         "on-click": "~/.config/waybar/scripts/squeekboard.fish",
         "tooltip": false
+    },
+    "custom/fullscreen": {
+        "format": "",
+        "on-click" : "swaymsg fullscreen toggle",
+        "tooltip" : false
     }
 },
 {
