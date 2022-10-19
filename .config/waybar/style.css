@@ -25,6 +25,12 @@ window#waybar {
     transition-duration: .5s;
 }
 
+window#waybar.touchbar {
+}
+
+window#waybar.external {
+}
+
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
@@ -238,3 +244,4 @@ button:hover {
         color: @bg-color-0;
     }
 }
+
