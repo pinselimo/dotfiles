@@ -31,7 +31,7 @@
         "interval": 1,
         "format": "{:%H : %M : %S}",
         "tooltip": true,
-        "tooltip-format": "{:%d - %m - %Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>\n<big>{:%Y %B}</big>",
         "max-length": 25,
         "on-click": "firefox 'https://calendar.google.com/'"
     },
