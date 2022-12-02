@@ -62,6 +62,14 @@
 
         " Autocomplete COC using <tab>
         inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "<tab>"
+
+        " Spell-check Markdown files and Git Commit Messages
+        autocmd FileType markdown setlocal spell
+        autocmd FileType gitcommit setlocal spell
+
+        " Enable dictionary auto-completion in Markdown files and Git Commit Messages
+        autocmd FileType markdown setlocal complete+=kspell
+        autocmd FileType gitcommit setlocal complete+=kspell
         '';
 
       packages.nix.start = with pkgs.vimPlugins; [
