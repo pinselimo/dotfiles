@@ -96,6 +96,7 @@
         lightspeed-nvim
         vimtex
         onedark-nvim
+        purescript-vim
       ];
     };
   };
