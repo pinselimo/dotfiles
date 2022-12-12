@@ -6,6 +6,8 @@
 #
 #
 
+exec wlsunset -l 47.1 -L 15.4
+
 # Add trackpad gesture support
 exec libinput-gestures
 

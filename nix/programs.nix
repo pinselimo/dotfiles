@@ -32,6 +32,7 @@
         avizo
         libinput-gestures
         playerctl
+        wlsunset
       ];
     };
   };
