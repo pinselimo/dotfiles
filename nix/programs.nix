@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  qt5.platformTheme = "gnome";
+  qt.platformTheme = "gnome";
   programs = {
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
