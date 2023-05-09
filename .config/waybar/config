@@ -15,7 +15,7 @@
                       , "cpu", "memory", "idle_inhibitor", "battery" ],
 
     "sway/mode": {
-        "format": "舘 {}",
+        "format": "󱥇 {}",
         "tooltip": false
     },
     "sway/workspaces": {
@@ -39,10 +39,10 @@
     "battery": {
         "format": "{capacity}% {icon}",
         "format-alt": "{time} {icon}",
-        "format-full": "",
-        "format-warning": "{capacity} ",
-        "format-critical": "{capacity} ",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "format-full": "",
+        "format-warning": "{capacity} 󰂎",
+        "format-critical": "{capacity} 󰂃",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
         "interval": 30,
         "states": {
             "warning": 20,
@@ -55,11 +55,11 @@
         "format-alt": "{icon} {signalStrength} \"{essid}\"",
         "format-alt-click": "click-right",
         "format-icons": {
-            // "wifi": ["", "礪" ,"閭"],
+            // "wifi": ["󰂵", "󰒆" ,"󰒇"],
             "wifi": [""],
-            "ethernet": ["囹"],
-            "linked": ["驪"],
-            "disconnected": ["睊"]
+            "ethernet": [""],
+            "linked": ["󰒈"],
+            "disconnected": ["󰤭"]
         },
         "on-click": "footclient nmtui",
         "tooltip": false
@@ -68,15 +68,15 @@
         "format-alt": "{icon} {volume}",
         "format": "{icon}",
         "format-alt-click": "click-right",
-        "format-muted": "婢",
-        "format-source": "",
-        "format-source-muted": "",
+        "format-muted": "󰸈",
+        "format-source": "󰍬",
+        "format-source-muted": "󰍭",
         "format-icons": {
-            "phone": ["",""],
-            "headphone": "",
-            "headset": "",
-            "bluetooth": "",
-            "default": ["奄","奔","墳"]
+            "phone": ["","󰏵"],
+            "headphone": "󰋋",
+            "headset": "󰋎",
+            "bluetooth": "󰂯",
+            "default": ["󰕿","󰖀","󰕾"]
         },
         "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
@@ -84,8 +84,8 @@
         "tooltip": false
     },
     "cpu": {
-        "format-alt": " {usage}",
-        "format": "",
+        "format-alt": "󰍛 {usage}",
+        "format": "󰍛",
         "format-alt-click": "click-right",
         "tooltip": false,
         "on-click": "footclient gtop"
@@ -100,7 +100,7 @@
     "backlight": {
         "format-alt": "{icon} {percent}",
         "format": "{icon}",
-        "format-icons": ["", "", "", "", "", ""],
+        "format-icons": ["󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
         "on-scroll-down": "light -A 1",
         "on-scroll-up": "light -U 1"
     },
@@ -118,7 +118,7 @@
         "on-click": "firefox 'https://google.com/search?q=Weather%20Graz'"
     },
     "custom/dice": {
-        "exec": "fish -c \"echo (random choice \"\" \"\" \"\" \"\" \"\" \"\")\"",
+        "exec": "fish -c \"echo (random choice \"󰇊\" \"󰇋\" \"󰇌\" \"󰇍\" \"󰇎\" \"󰇏\")\"",
         "interval": "once",
         "on-click": "",
         "tooltip": false
@@ -126,8 +126,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "零",
-            "deactivated": "鈴"
+            "activated": "󰒳",
+            "deactivated": "󰒲"
         },
         "tooltip": false
     },
@@ -163,7 +163,7 @@
                       , "idle_inhibitor", "battery"],
 
     "sway/mode": {
-        "format": "舘 {}",
+        "format": "󱥇 {}",
         "tooltip": false
     },
     "sway/workspaces": {
@@ -187,10 +187,10 @@
     "battery": {
         "format": "{capacity}% {icon}",
         "format-alt": "{time} {icon}",
-        "format-full": "",
-        "format-warning": "{capacity} ",
-        "format-critical": "{capacity} ",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "format-full": "",
+        "format-warning": "{capacity} 󰂎",
+        "format-critical": "{capacity} 󰂃",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
         "interval": 30,
         "states": {
             "warning": 20,
@@ -203,11 +203,11 @@
         "format-alt": "{icon} {signalStrength} \"{essid}\"",
         "format-alt-click": "click-right",
         "format-icons": {
-            // "wifi": ["", "礪" ,"閭"],
+            // "wifi": ["󰂵", "󰒆" ,"󰒇"],
             "wifi": [""],
-            "ethernet": ["囹"],
-            "linked": ["驪"],
-            "disconnected": ["睊"]
+            "ethernet": [""],
+            "linked": ["󰒈"],
+            "disconnected": ["󰤭"]
         },
         "on-click": "footclient nmtui",
         "tooltip": false
@@ -216,15 +216,15 @@
         "format-alt": "{icon} {volume}",
         "format": "{icon}",
         "format-alt-click": "click-right",
-        "format-muted": "婢",
-        "format-source": "",
-        "format-source-muted": "",
+        "format-muted": "󰸈",
+        "format-source": "󰍬",
+        "format-source-muted": "󰍭",
         "format-icons": {
-            "phone": ["",""],
-            "headphone": "",
-            "headset": "",
-            "bluetooth": "",
-            "default": ["奄","奔","墳"]
+            "phone": ["","󰏵"],
+            "headphone": "󰋋",
+            "headset": "󰋎",
+            "bluetooth": "󰂯",
+            "default": ["󰕿","󰖀","󰕾"]
         },
         "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
@@ -234,7 +234,7 @@
     "backlight": {
         "format-alt": "{icon} {percent}",
         "format": "{icon}",
-        "format-icons": ["", "", "", "", "", ""],
+        "format-icons": ["󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
         "on-scroll-down": "light -A 1",
         "on-scroll-up": "light -U 1"
     },
@@ -249,7 +249,7 @@
         "on-click": "firefox 'https://google.com/search?q=Weather%20Graz'"
     },
     "custom/dice": {
-        "exec": "fish -c \"echo (random choice \"\" \"\" \"\" \"\" \"\" \"\")\"",
+        "exec": "fish -c \"echo (random choice \"󰇊\" \"󰇋\" \"󰇌\" \"󰇍\" \"󰇎\" \"󰇏\")\"",
         "interval": "once",
         "on-click": "",
         "tooltip": false
@@ -257,18 +257,18 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "零",
-            "deactivated": "鈴"
+            "activated": "󰒳",
+            "deactivated": "󰒲"
         },
         "tooltip": false
     },
     "custom/squeekboard": {
-        "format": "",
+        "format": "󰌓",
         "on-click": "~/.config/waybar/scripts/squeekboard.fish",
         "tooltip": false
     },
     "custom/fullscreen": {
-        "format": "",
+        "format": "󰊓",
         "on-click" : "swaymsg fullscreen toggle",
         "tooltip" : false
     }

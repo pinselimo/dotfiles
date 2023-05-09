@@ -37,7 +37,7 @@ case $(echo ${weather[1]##*,} | tr '[:upper:]' '[:lower:]') in
     condition=""
     ;;
 "partly cloudy")
-    condition="杖"
+    condition="󰖕"
     ;;
 "cloudy")
     condition=""
@@ -46,7 +46,7 @@ case $(echo ${weather[1]##*,} | tr '[:upper:]' '[:lower:]') in
     condition=""
     ;;
 "mist" | "fog" | "freezing fog")
-    condition="敖"
+    condition="󰖑"
     ;;
 "patchy rain possible" | "patchy light drizzle" | "light drizzle" | "patchy light rain" | "light rain" | "light rain shower" | "rain")
     condition=""
