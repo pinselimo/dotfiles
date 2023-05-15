@@ -5,7 +5,6 @@
     plymouth.enable = true;
     loader.grub = {
       enable = true;
-      version = 2;
       extraGrubInstallArgs = [ "--modules=all_video" ];
       # Define on which hard drive you want to install Grub.
       device = "/dev/nvme0n1"; # or "nodev" for efi only
