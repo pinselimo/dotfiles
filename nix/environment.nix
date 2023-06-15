@@ -70,7 +70,7 @@
 
       # graphical UI basics
       firefox-esr-wayland
-      libwacom
+      #libwacom
       polkit_gnome
       gnome.adwaita-icon-theme
       xdg-utils

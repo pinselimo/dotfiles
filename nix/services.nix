@@ -39,7 +39,7 @@
     xserver = {
       # Configure keymap in X11
       layout = "de";
-      wacom.enable = true;
+      wacom.enable = false;
       # Enable touchpad support (enabled default in most desktopManager).
       libinput.enable = true;
     };
