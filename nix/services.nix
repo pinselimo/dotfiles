@@ -47,7 +47,14 @@
     };
 
     # Enable CUPS to print documents.
-    printing.enable = true;
+    printing = {
+      enable = true;
+      drivers = with pkgs; [ hplip hplipWithPlugin ];
+    };
+    avahi = {
+      enable = true;
+      openFirewall = true;
+    };
 
     blueman.enable = true;
     pipewire = {
