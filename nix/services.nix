@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
 {
+  hardware.pulseaudio.enable = false;
+
   security = {
     pam.services.login = {
       enableGnomeKeyring = true;
