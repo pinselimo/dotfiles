@@ -2,9 +2,13 @@
 {
   fonts = {
     packages = with pkgs; [
+      inter
       noto-fonts
+      hack-font
       noto-fonts-emoji
+      roboto
       (nerdfonts.override { fonts = [ "Noto"
+                                      "Hack"
                                     #  "JetBrainsMono"
                                     ]; })
       liberation_ttf
