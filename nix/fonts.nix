@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   fonts = {
-    fonts = with pkgs; [
+    packages = with pkgs; [
       noto-fonts
       noto-fonts-emoji
       (nerdfonts.override { fonts = [ "Noto"
