@@ -12,7 +12,7 @@
         home = "/home/pinselimo";
         description = "pinselimo";
         extraGroups = [ "wheel" "networkmanager" "video" "input" "wireshark" ];
-        passwordFile = "/etc/passwordFile";
+        hashedPasswordFile = "/etc/passwordFile";
       };
     };
   };
