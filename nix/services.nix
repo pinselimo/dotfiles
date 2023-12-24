@@ -29,6 +29,7 @@
   };
 
   services = {
+    fwupd.enable = true;
     udev.extraRules = ''
       SUBSYSTEM=="usb", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="5147", ATTR{authorized}="0"
     '';
