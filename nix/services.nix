@@ -29,6 +29,9 @@
   };
 
   services = {
+    udev.extraRules = ''
+      SUBSYSTEM=="usb", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="5147", ATTR{authorized}="0"
+    '';
     udisks2.enable = true;
     greetd = {
       enable = true;
