@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixpkgs-stable.url =  "nixpkgs/nixos-22.05";
+    nixpkgs-stable.url =  "nixpkgs/nixos-23.11";
 
     #neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     #neovim-nightly-overlay.inputs.neovim-flake.url = "github:neovim/neovim/v0.7.0?dir=contrib";
