@@ -3,6 +3,7 @@
   boot = {
     initrd.verbose = false;
     plymouth.enable = true;
+    supportedFilesystems = [ "ntfs" ];
     loader.grub = {
       enable = true;
       extraGrubInstallArgs = [ "--modules=all_video" ];
