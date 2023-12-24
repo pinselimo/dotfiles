@@ -72,12 +72,13 @@
       emacs
       nodejs # for CoC
       coq
+      coqPackages.coqide
       netlogo
       latex
       libnfc
 
       # graphical UI basics
-      firefox-esr-wayland
+      firefox-esr
       #libwacom
       polkit_gnome
       gnome.adwaita-icon-theme
@@ -97,17 +98,41 @@
       wl-clipboard
       wl-mirror
       glib
+      gnome.gnome-tweaks
+      gnomeExtensions.pano  # clipboard manager
+      #gnomeExtensions.glasa # eyes - uses local version, see above
+      gnomeExtensions.snowy # snow
+      gnomeExtensions.focus # transparent unfocused windows
+      gnomeExtensions.openweather # open weather pane
+      gnomeExtensions.pixel-saver # hides top bars
+      gnomeExtensions.user-themes # customizable themes
+      gnomeExtensions.another-window-session-manager # reopen sessions
       wmctrl # switch workspaces
 
+      # GNOME apps
+      authenticator
+      apostrophe
+      blanket
+      bottles
+      dialect
+      gnome-obfuscate
+      plots
+      gnome-secrets
+      shortwave
+      gnome-solanum
+      tangram
+
       # apps
+      gaphor
+      zettlr
       pavucontrol
       gnome.seahorse
+      networkmanagerapplet
       krita-beta
       ncspot
-      #cava
+      spotify
       pidgin
-      zotero
-      libreoffice
+      zotero_7
       inkscape
       xournalpp
       calibre
@@ -115,14 +140,13 @@
       vlc
       chromium
       signal-desktop
-      #falsisign
       jq # for fishPlugins.done
       jmtpfs
       wireshark
+      planify
     ]) ++ (with pkgs.fishPlugins; [
       done
       forgit
-      #pisces
     ]);
 
     pathsToLink = [ "/libexec" "/share/nix-direnv" ];
