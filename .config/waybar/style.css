@@ -96,7 +96,7 @@ button:hover {
 }
 
 #custom-dice {
-    padding: 0 10px;
+    padding: 0 12 0 10px;
     margin: 0 4px;
     color: @fg-color;
     background-color: @bg-color-2;
@@ -128,7 +128,7 @@ button:hover {
 }
 
 #battery {
-    padding: 0 10px;
+    padding: 0 17 0 10px;
     margin: 0 4px;
     background-color: @bg-color-2;
     color: @fg-color;
@@ -156,7 +156,7 @@ button:hover {
 }
 
 #network {
-    padding: 0 10px;
+    padding: 0 17 0 10px;
     margin: 0 4px;
     background-color: @bg-color-2;
     color: @fg-color;
@@ -193,7 +193,7 @@ button:hover {
 }
 
 #backlight {
-    padding: 0 10px;
+    padding: 0 14 0 10px;
     margin: 0 4px;
     background-color: @bg-color-2;
     color: @fg-color;
@@ -201,7 +201,7 @@ button:hover {
 }
 
 #cpu {
-    padding: 0 10px;
+    padding: 0 12 0 10px;
     margin: 0 4px;
     background-color: @bg-color-2;
     color: @fg-color;
@@ -213,7 +213,7 @@ button:hover {
 }
 
 #memory {
-    padding: 0 10px;
+    padding: 0 13 0 10px;
     margin: 0 4px;
     background-color: @bg-color-2;
     color: @fg-color;
@@ -225,7 +225,7 @@ button:hover {
 }
 
 #idle_inhibitor {
-    padding: 0 10px;
+    padding: 0 13 0 10px;
     margin: 0 4px;
     background-color: @bg-color-2;
     color: @fg-color;
