@@ -1,4 +1,4 @@
-{ config, pkgs, lora, ... }: {
+{ config, pkgs, glasa, lora, nixpkgs-stable, my-golden-cheetah, ... }: {
   environment = {
     systemPackages = let
       defaultPythonPackages = pythonPackages: with pythonPackages; [
@@ -22,15 +22,18 @@
         inherit (texlive)
         scheme-small
 
-                  # additional latex libraries
-                  amsmath
+        # additional latex libraries
+        amsmath
 
-                  # build tools
-                  latexmk
-                  ;
-                };
+        # build tools
+        latexmk
+        ;
+      };
     in
     [ lora.packages.x86_64-linux.default ] ++
+    [ glasa.packages.x86_64-linux.default ] ++
+    [ nixpkgs-stable.legacyPackages.x86_64-linux.libreoffice-fresh ] ++
+    [ my-golden-cheetah.packages.x86_64-linux.default ] ++
     (with pkgs; [
       # terminal basics
       locale
