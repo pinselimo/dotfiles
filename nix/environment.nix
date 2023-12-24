@@ -40,9 +40,10 @@
       killall
       wget
       gitFull
+      libsixel
 
       # Modern Unix
-      exa
+      eza
       bat
       duf
       ripgrep
@@ -52,13 +53,14 @@
       xh # httpie
       thefuck
       delta
+      unzip
 
       # flakey nix-shell replacement
       direnv
       nix-direnv
 
       # pl basics
-      (python39.withPackages defaultPythonPackages)
+      (python311.withPackages defaultPythonPackages)
       (ghc.withPackages defaultHaskellPackages)
       cabal-install
       idris2
@@ -69,6 +71,7 @@
       coq
       netlogo
       latex
+      libnfc
 
       # graphical UI basics
       firefox-esr-wayland
@@ -90,6 +93,8 @@
       waybar
       wl-clipboard
       wl-mirror
+      glib
+      wmctrl # switch workspaces
 
       # apps
       pavucontrol
@@ -109,6 +114,8 @@
       signal-desktop
       #falsisign
       jq # for fishPlugins.done
+      jmtpfs
+      wireshark
     ]) ++ (with pkgs.fishPlugins; [
       done
       forgit
