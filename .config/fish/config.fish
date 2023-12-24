@@ -10,6 +10,9 @@ alias ls='eza --git --icons --time-style long-iso --group-directories-first'
 alias df='duf'
 alias htop='gtop'
 alias cat='bat'
+alias flake-shell='nix develop --command fish'
+alias fvi='nix develop --command vi'
+alias fnotebook='nix develop --command jupyter notebook'
 
 # Set Tensorflow log level lower
 set -x TF_CPP_MIN_LOG_LEVEL 2
@@ -19,7 +22,6 @@ fish_add_path /home/pinselimo/.nix-profile/bin/
 
 # What
 thefuck --alias | source
-
 
 # direnv
 direnv hook fish | source
