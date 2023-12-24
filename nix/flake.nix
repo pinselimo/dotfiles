@@ -13,20 +13,27 @@
       url = "path:/home/pinselimo/vim/vim-monkey-c";
     };
 
-    lora.url = "github:pinselimo/lora";
+    lora.url = "github:pinselimo/lora/main";
+    #idris2-latest.url = "path:/home/pinselimo/Idris/Idris2";
+    glasa.url = "github:pinselimo/gnome-extension-glasa/cross-eye-45-nix";
+
+    # This is necessary until networkmanager-openconnect version 1.2.9
+    #oc-sso.url = "path:/home/pinselimo/Python/openconnect-sso";
+
+    my-golden-cheetah = {
+      #flake = false;
+      url = "path:/home/pinselimo/CPP/GoldenCheetah";
+    };
 
     expiry-done = {
       flake = false;
-      url = "github:huafu/done?rev=78b812b2cb14ab8f0dc5ea3f3b4939c8b84e392f";
+      url = "path:/home/pinselimo/shell/done";
     };
 
-    pinselimo-waybar = {
-      flake = false;
-      url = "github:pinselimo/Waybar?rev=61886b3b99e09fc2718b1866231fc4943b7d6e14";
-    };
+    #waybar-latest.url = "github:Alexays/Waybar/master";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, ... }@attrs: rec {
+  outputs = { self, nixpkgs, ... }@attrs: rec {
     nixosConfigurations.pinkthad = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = attrs;
