@@ -63,7 +63,7 @@
       nix-direnv
 
       # pl basics
-      (python311.withPackages defaultPythonPackages)
+      (python310.withPackages defaultPythonPackages)
       (ghc.withPackages defaultHaskellPackages)
       cabal-install
       idris2
