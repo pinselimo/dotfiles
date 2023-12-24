@@ -19,8 +19,8 @@
         hoogle
       ];
       latex = with pkgs; texlive.combine {
-                inherit (texlive)
-                  scheme-small
+        inherit (texlive)
+        scheme-small
 
                   # additional latex libraries
                   amsmath
