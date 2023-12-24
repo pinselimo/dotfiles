@@ -34,7 +34,7 @@
     '';
     udisks2.enable = true;
     greetd = {
-      enable = true;
+      enable = false;
       settings.default_session = {
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
         user = "greeter";
@@ -42,12 +42,18 @@
     };
 
     xserver = {
+      enable = true;
       # Configure keymap in X11
       layout = "de";
       wacom.enable = false;
       # Enable touchpad support (enabled default in most desktopManager).
       libinput.enable = true;
+
+      # Enable GNOME
+      displayManager.gdm.enable = true;
+      desktopManager.gnome.enable = true;
     };
+    gnome.at-spi2-core.enable = true;
 
     # Enable CUPS to print documents.
     printing = {
