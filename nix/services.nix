@@ -114,4 +114,43 @@
   systemd.services.dnscrypt-proxy2.serviceConfig = {
     StateDirectory = "dnscrypt-proxy";
   };
+
+  systemd.user = {
+    sockets = {
+      foot-server = {
+        listenStreams = [ "%t/foot.sock" ];
+        after = [ "graphical-session.target" ];
+        wantedBy = [ "graphical-session.target" ];
+        partOf = [ "graphical-session.target" ];
+
+        unitConfig = {
+          ConditionEnvironment = [ "WAYLAND_DISPLAY" ];
+        };
+      };
+    };
+
+    services = {
+      foot-server = {
+        script = "${pkgs.foot}/bin/foot --server=3";
+        environment = {
+          PATH = (pkgs.lib.mkForce "/run/current-system/sw/bin/");
+        };
+        description = "Foot terminal server mode";
+        documentation = [ "man:foot(1)" ];
+        after = [ "graphical-session.target" ];
+        wantedBy = [ "graphical-session.target" ];
+        partOf = [ "graphical-session.target" ];
+
+        unitConfig = {
+          Requires = "%N.socket";
+          ConditionEnvironment = [ "WAYLAND_DISPLAY" ];
+        };
+
+        serviceConfig = {
+          UnsetEnvironment = [ "LISTEN_PID" "LISTEN_FDS" "LISTEN_FDNAMES" ];
+          NonBlocking = true;
+        };
+      };
+    };
+  };
 }
