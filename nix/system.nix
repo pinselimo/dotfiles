@@ -32,7 +32,10 @@
         #backend = "iwd";
         macAddress = "random";
       };
-      plugins = [ pkgs.networkmanager-openvpn ];
+      plugins = with pkgs; [ 
+        networkmanager-openvpn
+        networkmanager-openconnect
+      ];
     };
 
     # The global useDHCP flag is deprecated, therefore explicitly set to false here.
