@@ -57,6 +57,8 @@ set $right l
 # Your preferred terminal emulator
 exec foot --server
 set $term footclient
+set $brightterm footclient --override=colors.background=aaaaaa --override=colors.foreground=111111 "fish" "-C fish_config theme choose None" "-C set -x THEME bright"
+
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened

@@ -38,6 +38,7 @@
 #
     # Start a terminal
     bindsym --no-repeat $mod+Return exec $term
+    bindsym --no-repeat $mod+Shift+Return exec $brightterm
 
     # Kill focused window
     bindsym --to-code $mod+Shift+q kill
