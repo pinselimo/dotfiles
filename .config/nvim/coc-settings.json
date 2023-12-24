@@ -29,4 +29,8 @@
       }
     }
   }
+  ,
+  "jedi" : {
+    "markupKindPreferred": "plaintext"
+  }
 }
