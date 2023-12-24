@@ -20,9 +20,6 @@ fish_add_path /home/pinselimo/.nix-profile/bin/
 # What
 thefuck --alias | source
 
-if test -n "$DESKTOP_SESSION"
-    set -x (gnome-keyring-daemon --start | string split "=")
-end
 
 # direnv
 direnv hook fish | source
