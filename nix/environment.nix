@@ -9,6 +9,8 @@
         seaborn
         jupyter
         autopep8
+        sympy
+        scipy
 
         yq # like jq but for xml
       ];
