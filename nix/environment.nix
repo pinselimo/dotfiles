@@ -144,6 +144,8 @@
       jmtpfs
       wireshark
       planify
+      protonup-ng
+      protontricks
     ]) ++ (with pkgs.fishPlugins; [
       done
       forgit
